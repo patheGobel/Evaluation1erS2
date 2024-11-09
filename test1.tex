@@ -17,26 +17,23 @@
 \usetikzlibrary{arrows, shapes.geometric, fit}
 \newcounter{correction} % Compteur pour les questions
 
-% Définir une nouvelle couleur
-\definecolor{myorange}{RGB}{255,165,0}
-
 % Définir la commande pour afficher une question numérotée
 \newcommand{\question}{%
   \refstepcounter{correction}%
-  \textbf{\textcolor{black}{Question \thecorrection ( 1 point ) :}} \ignorespaces
+  \textbf{\textcolor{black}{Question \thecorrection (1 point) :}} \ignorespaces
 }
 % Commande pour ajouter du texte en arrière-plan
 \AddToShipoutPicture{
     \AtTextCenter{%
-        \makebox[0pt]{\rotatebox{80}{\textcolor[gray]{0.9}{\fontsize{10cm}{10cm}\selectfont PGB}}}
+        \makebox[0pt]{\rotatebox{80}{\textcolor[gray]{0.9}{\fontsize{10cm}{10cm}\selectfont Pathé Gobel BA}}}
     }
 }
 \begin{document}
-
+\hrule % Barre horizontale
 % En-tête
 \begin{center}
     \begin{tabular}{@{} p{5cm} p{5cm} p{5cm} @{}} % 3 colonnes avec largeurs fixées
-        Lycée Dindéfélo & \quad\quad Test 1 & 09 Octobre 2024 \\
+        Lycée Dindéfélo & \quad\quad\quad Test 1 & 09 Novembre 2024 \\
     \end{tabular}
     \\[-0.01cm] % Ajuster l'espace vertical entre le tableau et la barre
     \hrule % Barre horizontale
@@ -44,9 +41,9 @@
 \begin{center}
     \textbf{\Large Equations-Inéquations} \\[0.2cm]
     \textbf{\large Professeur : M. BA} \\[0.2cm]
-    \textbf{Classe : 1er S2} \\[0.2cm]
-    \textbf{\small Durée : 5 minutes} \\[0.2cm]
-    \textbf{\small Note : \quad\quad/5}
+    \textbf{Classe : $1^{er}$ S2} \\[0.2cm]
+    \textbf{\small Durée : 10 minutes} \\[0.2cm]
+    \textbf{\small Note :\quad\quad /5}
 \end{center}
 
 % Nom de l'élève
