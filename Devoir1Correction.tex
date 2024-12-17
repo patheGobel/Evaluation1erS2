@@ -117,7 +117,7 @@ Dans le cas où \( (E) \) admet deux racines distinctes \( x_{2} \) et \( x_{2} 
 
 \item[b)]Trouver une relation indépendante de \( m \) entre \( x_{2} \) et \( x_{2} \)
 \end{enumerate}
-\section*{\underline{Correction Exercice 1 :} 3 points}
+\section*{\underline{\textcolor{green}{Correction Exercice 1 :} 3 points}}
 Soit \( m \) un nombre réel. On considère l’équation d’inconnue \( x \) :
 
 \( (E_{m}) \):\( (m+3)x^{2} +2mx + m + 5 = 0\)
@@ -223,10 +223,71 @@ Pour que \( (2x_1 - 1)(2x_2 - 1) = 6 \) soit vérifiée, il faut que :
 \(
 m = -\frac{5}{3}
 \)
-
+\newpage
 \item $ \underline{x_1^{2} + x_2^{2} = 2} $
 
+\begin{align*}
+\left( x_1 + x_2 \right)^2 - 2x_1x_2 &= 2\\
+S^2 - 2P &= 2\\
+\left( \frac{2m}{m+3} \right)^2 - 2 \left( \frac{m+5}{m+3} \right) &= 2\\
+\frac{4m^2}{(m+3)^2} - \frac{2(m+5)(m+3)}{(m+3)^2} &= 2\\
+\frac{4m^2 - \left( 2m^2 + 16m + 30 \right)}{(m+3)^2} &= 2\\
+2m^2 - 16m - 30 &= 2(m+3)^2\\
+2m^2 - 16m - 30 &= 2m^2 + 12m + 18\\
+-28m &= 48\\
+m = -\frac{48}{28} &= -\frac{12}{7}\\
+\end{align*}
+\textbf{Conclusion} :  
+Pour que \( x_1^{2} + x_2^{2} = 2 \) soit vérifiée, il faut que :\( m = -\frac{12}{7} \)
 \end{itemize}
+
+\item[b)] Une relation indépendante de $m$ entre $x_1$ et $x_2$
+
+\[
+S = -\frac{2m}{m+3} \quad \text{et} \quad P = \frac{m+5}{m+3}
+\]
+
+Nous avons le système suivant :
+\[
+\begin{cases}
+S=\frac{-2m}{m+3} \\
+P=\frac{m+5}{m+3}
+\end{cases} \implies 
+\begin{cases}
+mS + 3S = -2m \\
+mP + 3P = m+5
+\end{cases}\implies
+\begin{cases}
+m(S + 2) = 3S \\
+m(P - 1) = 5 - 3P
+\end{cases}
+\]
+
+En isolant $m$ dans chaque équation :
+\[
+\begin{cases}
+m = -\frac{3S}{S + 2} \\
+m = \frac{5 - 3P}{P - 1}
+\end{cases}
+\]
+
+Par égalité des deux expressions de $m$, on obtient :
+\[
+-\frac{3S}{S + 2} = \frac{5 - 3P}{P - 1}.
+\]
+\[
+\begin{aligned}
+  -3S(P-1) &= 5 - 3P(S+2) \\
+  -3P + 3S &= 5S + 10 - 3PS - 6P \\
+  2S - 6P &= 10 \\
+  S - 3P -5&= 0
+\end{aligned}
+\]
+\begin{center}
+\textcolor{green}{\boxed{S - 3P -5= 0}}
+\end{center}
 \end{enumerate}
+
+
 
 \end{document}
