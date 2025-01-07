@@ -1,0 +1,625 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath,amssymb,mathrsfs,tikz,times,pifont}
+\usepackage{enumitem}
+%+++++++++++++++++++++++++++++++++++++++++++++++++
+\usepackage{stmaryrd}
+\usepackage{graphicx} % Pour l'insertion d'images
+\usepackage{float}    % Pour contrôler précisément le placement
+\usepackage[utf8]{inputenc}
+
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{verbatim}
+
+\usepackage{color, soul}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tkz-tab}
+%+++++++++++++++++++++++++++++++++++++++++++++++++
+\newcommand\circitem[1]{%
+\tikz[baseline=(char.base)]{
+\node[circle,draw=gray, fill=red!55,
+minimum size=1.2em,inner sep=0] (char) {#1};}}
+\newcommand\boxitem[1]{%
+\tikz[baseline=(char.base)]{
+\node[fill=cyan,
+minimum size=1.2em,inner sep=0] (char) {#1};}}
+\setlist[enumerate,1]{label=\protect\circitem{\arabic*}}
+\setlist[enumerate,2]{label=\protect\boxitem{\alph*}}
+%%%::::::by chnini ameur :::::::%%%
+\everymath{\displaystyle}
+\usepackage[left=1cm,right=1cm,top=1cm,bottom=1.7cm]{geometry}
+\usepackage{array,multirow}
+\usepackage[most]{tcolorbox}
+\usepackage{varwidth}
+\tcbuselibrary{skins,hooks}
+\usetikzlibrary{patterns}
+%%%::::::by chnini ameur :::::::%%%
+\newtcolorbox{exa}[2][]{enhanced,breakable,before skip=2mm,after skip=5mm,
+colback=yellow!20!white,colframe=black!20!blue,boxrule=0.5mm,
+attach boxed title to top left ={xshift=0.6cm,yshift*=1mm-\tcboxedtitleheight},
+fonttitle=\bfseries,
+title={#2},#1,
+% varwidth boxed title*=-3cm,
+boxed title style={frame code={
+\path[fill=tcbcolback!30!black]
+([yshift=-1mm,xshift=-1mm]frame.north west)
+arc[start angle=0,end angle=180,radius=1mm]
+([yshift=-1mm,xshift=1mm]frame.north east)
+arc[start angle=180,end angle=0,radius=1mm];
+\path[left color=tcbcolback!60!black,right color = tcbcolback!60!black,
+middle color = tcbcolback!80!black]
+([xshift=-2mm]frame.north west) -- ([xshift=2mm]frame.north east)
+[rounded corners=1mm]-- ([xshift=1mm,yshift=-1mm]frame.north east)
+-- (frame.south east) -- (frame.south west)
+-- ([xshift=-1mm,yshift=-1mm]frame.north west)
+[sharp corners]-- cycle;
+},interior engine=empty,
+},interior style={top color=yellow!5}}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{fancyhdr}
+\usepackage{eso-pic}         % Pour ajouter des éléments en arrière-plan
+% Commande pour ajouter du texte en arrière-plan
+\AddToShipoutPicture{
+    \AtTextCenter{%
+        \makebox[0pt]{\rotatebox{80}{\textcolor[gray]{0.7}{\fontsize{5cm}{5cm}\selectfont PGB}}}
+    }
+}
+\usepackage{lastpage}
+\fancyhf{}
+\pagestyle{fancy}
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footruleskip}{10pt}
+\fancyfoot[R]{
+\color{blue}\ding{45}\ \textbf{2024}
+}
+\fancyfoot[L]{
+\color{blue}\ding{45}\ \textbf{Prof:M. BA}
+}
+\cfoot{\bf
+\thepage /
+\pageref{LastPage}}
+\begin{document}
+\renewcommand{\arraystretch}{1.5}
+\renewcommand{\arrayrulewidth}{1.2pt}
+% Nouvelle commande pour entourer un nombre avec un cercle
+\newcommand{\encercle}[1]{\tikz[baseline=(X.base)] \node (X) [draw, circle, inner sep=1pt] {#1};}
+\begin{tikzpicture}[overlay,remember picture]
+\node[draw=blue,line width=1.2pt,fill=purple,text=blue,inner sep=3mm,rounded corners,pattern=dots]at ([yshift=-2.5cm]current page.north) {\begingroup\setlength{\fboxsep}{0pt}\colorbox{white}{\begin{tabular}{|*1{>{\centering \arraybackslash}p{0.28\textwidth}} |*2{>{\centering \arraybackslash}p{0.2\textwidth}|} *1{>{\centering \arraybackslash}p{0.19\textwidth}|} }
+\hline
+\multicolumn{3}{|c|}{$\diamond$$\diamond$$\diamond$\ \textbf{Lycée de Dindéfélo}\ $\diamond$$\diamond$$\diamond$ }& \textbf{A.S. : 2024/2025} \\ \hline
+\textbf{Matière: Mathématiques}& \textbf{Niveau : 1}\textbf{$^{er}$S2} &\textbf{Date: 14/12/2024} & \textbf{Durée : 4 heures} \\ \hline
+\multicolumn{4}{|c|}{\parbox[c]{10cm}{\begin{center}
+\textbf{{\Large\sffamily Devoir n$ ^{\circ} $ 1 Du 1$ ^\text{\bf er} $ Semestre}}
+\end{center}}} \\ \hline
+\end{tabular}}\endgroup};
+\end{tikzpicture}
+\vspace{3cm}
+
+\section*{\underline{Exercice 1 :} (4 points)}
+
+Soit l’équation $(E_m) : (m - 2)x^2 + (2m + 2)x + 10m - 14 = 0$, $m \in \mathbb{R}$.
+
+\begin{enumerate}
+    \item Discuter suivant les valeurs de $m$ le nombre de racines de $(E_m)$. \hfill (2pt)
+
+    \item Pour quelle(s) valeur(s) de $m$, les solutions $x_1$ et $x_2$ de $(E_m)$ :
+    \begin{enumerate}
+        \item sont de signes contraires ? \hfill (1pt)
+        \item sont strictement positives ? \hfill (1pt)
+    \end{enumerate}
+\end{enumerate}
+
+\section*{\underline{\textcolor{green}{Correction Exercice 3 :} 5 points}}
+\begin{enumerate}
+    \item Résolvons dans $\mathbb{R}$ les équations suivantes.
+    \begin{enumerate}
+        \item $\sqrt{-x^2 + 5x + 9} = \sqrt{x - 3}$
+        
+\[
+\sqrt{-x^2 + 5x + 9} = \sqrt{x-3}\implies
+\begin{cases}
+x - 3 \geq 0 \quad (1) \\
+-x^2 + 5x + 9 =x-3 \quad (2)
+\end{cases}
+\]
+
+\textbf{Domaine de validité : \( D_v \)}
+
+(1) \( x - 3 > 0 \)  \\
+   \(
+   x \geq 3
+   \)\\
+   Donc, \( x \in [3, +\infty[ \).
+
+\textbf{Résolution}
+ 
+\(
+-x^2 + 5x + 9 = x - 3
+\)
+ 
+\(
+x^2 - 4x - 12 = 0
+\)
+\(
+\Delta' = 4 + 12 \implies \Delta = 16
+\)
+
+Les solutions sont :  
+\(
+x_1 = 2 - 4 \quad \text{et} \quad x_2 = 2 + 4
+\)
+\(
+x_1 = -2 \quad \text{et} \quad x_2 = 6
+\)
+
+\noindent Vérification des solutions dans le domaine de validité \( D_v \) :  
+\(
+-2 \notin D_v \quad \text{et} \quad 6 \in D_v
+\)
+
+\(
+\textcolor{green}{\boxed{S = \{ 6 \}  }} 
+\)
+\item $ \sqrt{x^2 - x - 2} = x + 1$
+\[
+\sqrt{x^2 - x - 2} = x + 1\implies
+\begin{cases}
+x + 1 \geq 0 \quad (1) \\
+x^2 - x - 2 \geq 0 \quad (2)
+\end{cases}
+\]
+\textbf{Domaine de validité : \( D_v \)}
+
+\( x + 1 > 0 \implies x > -1 \) \\  
+\( x \in ]-1, +\infty[ \quad \text{donc} \quad D_v = ]-1, +\infty[ \)
+
+\textbf{Résolution}
+
+\( x^2 - x - 2 = (x+1)^2 \)
+
+\( x^2 - x - 2 = x^2 + 2x + 1 \)
+
+\( -3x - 3 = 0 \implies x = -1 \)
+
+\noindent Vérification : \( -1 \in D_v \).  
+ 
+\(
+\textcolor{green}{\boxed{S = \{ -1 \}  }} 
+\)
+    \end{enumerate} 
+\item Résolvons dans \( \mathbb{R} \)
+
+\begin{enumerate}
+\item \(\sqrt{(x+3)(x-1)} \leq x-3\)
+
+\[
+\sqrt{(x+3)(x-1)} \leq x-3 \iff 
+\begin{cases}
+x-3 \geq 0 \quad (1) \\
+(x+3)(x-1) \geq 0 \quad (2) \\
+(x+3)(x-1) \leq (x-3)^2 \quad (3)
+\end{cases}
+\]
+ 
+(1) \((x+3)(x-1) \leq (x-3)^2\)
+
+\(
+x^2 + 2x - 3 \leq x^2 - 6x + 9
+\)
+
+\(
+8x - 12 \leq 0
+\)
+
+\(
+2x - 3 \leq 0
+\)
+
+\noindent donc le système d'inéquation devient :  
+\[
+\begin{cases}
+x-3 \geq 0 \quad (1) \\
+x^2 + 2x - 3 \geq 0 \quad (2) \\
+2x - 3 \leq 0 \quad (3)
+\end{cases}
+\]
+ 
+\[\textbf{Posons}
+\begin{cases}
+x-3 = 0 \quad (1) \\
+x^2 + 2x - 3 = 0 \quad (2) \\
+2x - 3 = 0 \quad (3)
+\end{cases}
+\]
+ 
+(1) \( x - 3 = 0 \implies x = 3 \)
+
+(2) \( x^2 + 2x - 3 = 0 \implies x = -3 \quad \text{et} \quad x = 1 \)
+
+(2)  \( 2x - 3 = 0 \implies x = \frac{3}{2} \)
+
+
+\begin{flushleft}
+\begin{tikzpicture}
+    \tkzTabInit[lgt=2.5]{$x$ / 1, $x-3$ / 1, $x^2+2x-3$ / 0.6, $2x-3$ / 0.6}
+      {$-\infty$, $-3$, $1$, $\frac{3}{2}$, $3$, $+\infty$}
+
+    % Ligne x-3
+    \tkzTabLine{ , - ,  , - ,  , -,,-,z,+ }
+    % Ligne x^2+2x-3
+    \tkzTabLine{ , + , z , - , z , +,,+,+,+ }
+    % Ligne 2x-3
+    \tkzTabLine{ , - ,  , - ,  , -,z,+,+,+ }
+\end{tikzpicture}
+\end{flushleft}
+\begin{center}
+\(
+\textcolor{green}{\boxed{S = \emptyset }} 
+\)
+\end{center}
+
+\item \( \sqrt{x^{2}-x-2} > x-1 \)
+
+\[
+\sqrt{x^2 - x - 2} > x - 1 \implies \textbf{(S1):}
+\begin{cases}
+x^2 - x - 2 \geq 0 \quad \encercle{1} \\
+x - 1 \geq 0 \quad \encercle{2} \\
+x^2 - x - 2 > (x-1)^2 \quad \encercle{3}
+\end{cases}\textbf{ ou }
+\textbf{(S2):}\begin{cases}
+x - 1 < 0 \quad \encercle{4} \\
+x^2 - x - 2 > 0 \quad \encercle{5}
+\end{cases}
+\]
+\underline{\textbf{Pour (S1):}}
+
+\(
+\encercle{3}\quad x^2 - x - 2 \geq (x-1)^2 , \\
+\quad x^2 - x - 2 \geq x^{2}-2x+1\\
+\quad x - 3 \geq 0
+\)
+
+
+\[\textbf{(S1):} \quad \text{devient} \quad \textbf{(S1):}
+\begin{cases}
+x^2 - x - 2 \geq 0  \quad \encercle{1}\\
+x - 1 \geq 0  \quad \encercle{2}\\
+\quad x - 3 > 0 \quad \encercle{3}
+\end{cases}
+\]
+
+\[\text{Posons }\textbf{(S1):}
+\begin{cases}
+x^2 - x - 2 = 0  \quad \encercle{1}\\
+x - 1  = 0 \quad \encercle{2}\\
+\quad x - 3 = 0 \quad \encercle{3}
+\end{cases}
+\]
+
+\(\encercle{1} \quad x^2 - x - 2 = 0 \implies x=-1 \textbf{ ou } x=2\)
+
+\(\encercle{2} \quad x - 1 = 0 \implies x=1 \)
+
+\(\encercle{3} \quad x - 3 = 0 \implies x=3 \)
+\begin{flushleft}
+\begin{tikzpicture}
+    % Initialisation du tableau avec colonnes ajustées
+    \tkzTabInit[lgt=2.5]{$x$ / 1, $x^2 - x - 2$ / 0.8, $x - 1$ / 0.8, $x - 3$ / 0.8}
+      {$-\infty$, $-1$, $1$, $2$, $3$, $+\infty$}
+
+    % Ligne -5x+1
+    \tkzTabLine{ , + , z , - , - , - ,z,+,,+ }
+    % Ligne x^2-3x+8
+    \tkzTabLine{ , + , + , + , z , - , ,-, ,- }
+    % Ligne x^2+2x+1
+    \tkzTabLine{ , + ,  , + ,  , + ,  ,+,z ,- }
+\end{tikzpicture}
+\end{flushleft}
+\[
+\textcolor{green}{\boxed{S1 = \left]-\infty ; -1\right[  }} 
+\]
+\underline{\textbf{Pour (S2):}}
+\[
+\textbf{(S2):}\begin{cases}
+x - 1 < 0 \quad \encercle{4} \\
+x^2 - x - 2 > 0 \quad \encercle{5}
+\end{cases}
+\]
+\[\text{Posons }\textbf{(S2):}
+\begin{cases}
+x - 1 = 0 \quad \encercle{4} \\
+x^2 - x - 2 = 0 \quad \encercle{5}
+\end{cases}
+\]
+
+\( \encercle{4} x - 1 = 0 \implies x=1\)
+
+\( \encercle{5} x^2 - x - 2 = 0 \implies x=-1 \textbf{ ou } x= 2\)
+\begin{flushleft}
+\begin{tikzpicture}
+    % Initialisation du tableau avec colonnes ajustées
+    \tkzTabInit[lgt=2.5]{$x$ / 1, $x - 1$ / 0.8, $x^2 - x - 2$ / 0.8}
+      {$-\infty$, $-1$, $1$, $2$, $+\infty$}
+
+    % Ligne -5x+1
+    \tkzTabLine{ , - ,  , - , z , + , ,+, }
+    % Ligne x^2-x-2
+    \tkzTabLine{ , + , z , - ,  , - ,z ,+ }
+\end{tikzpicture}
+\end{flushleft}
+\[
+\textcolor{green}{\boxed{S2 = \left]-\infty ; -1\right[  }} 
+\]
+\[
+\textcolor{green}{\boxed{S=S1 \cup S2 = \left]-\infty ; -1\right[  }} 
+\]
+\item $x^4 + x^2 - 12 \leq 0$
+
+Posons $x^4 + x^2 - 12 = 0$ et  $X=x^2$
+
+donc $X^4 + X - 12 = 0$
+
+$\Delta = 49$
+
+$X_{1}=\frac{-1+7}{2}$,$X_{1}=\frac{-1-7}{2}$
+
+$X_{1}=3$,$X_{1}=-4 	$
+\[
+\textcolor{green}{\boxed{S = \{ \sqrt{3} ; -\sqrt{3} \}   }} 
+\]
+\end{enumerate}
+    \item Résolvons dans $\mathbb{R}^3$ par la méthode du Pivot de Gauss le système
+    \[
+    \begin{cases}
+        x - 2y + z = 6 \\
+        -2x + y - z = -6 \\
+        3x - y - 2z = -2
+    \end{cases}
+    \]
+
+Choisison $x - 2y + z = 6$ comme pivot 
+    \[
+\underline{    \begin{cases}
+        2x - 4y + 2z = 12 \\
+        -2x + y - z = -6 \\
+    \end{cases}}
+    \]
+    \[-3y+z=6\]
+    \[
+\underline{    \begin{cases}
+        3x - 6y + 3z = 18 \\
+        3x - y - 2z = -2 
+    \end{cases}}
+    \]
+    \[-5y+5z=20\]
+    \[-y+z=4\]
+
+    \[
+\begin{cases}
+        -3y+z=6 \\
+        -y+z=4
+    \end{cases}
+    \]
+        \[
+    \begin{cases}
+        x - 2y + z = 6 \\
+        \quad -3y+z=6 \\
+        \quad -y+z=4
+    \end{cases}
+    \]
+    \[
+\underline{    \begin{cases}
+        -3y+z=6 \\
+        -3y+3z=12
+    \end{cases}}
+    \]
+    \[-2z=-6\]
+    \[z=3\]
+    \[
+    \begin{cases}
+        x - 2y + z = 6 \\
+        \quad -3y+z=6 \\
+        \quad\quad\quad\quad z=3
+    \end{cases}
+    \]
+    
+    \[z=3 \text{ dans } -3y+z=6  \text{ on a } -3y+3=6 \implies y=-1\]
+    \[\text{$z=3 $ et $y=-1$ dans } x - 2y + z = 6  \text{ on a } x - 2(-1) + 3 = 6 \implies x=1\]
+\[
+\textcolor{green}{\boxed{S = (1,-1,3)   }} 
+\]
+\end{enumerate}
+
+\section*{\underline{\textcolor{green}{Correction Exercice 2 :} 5 points}}
+
+On donne \( P(x) = 2x^3 + ax^2 + bx - 6 \) où \( a \) et \( b \) des réels.
+
+\begin{enumerate}
+    \item Déterminons \( a \) et \( b \) pour que \( P(x) \) soit divisible par \( x^2 - x - 2 \).
+
+    \item[\( \bullet \)] Si \( x^2 - x - 2 \) divise \( P(x) \), alors les racines de \( x^2 - x - 2 = 0 \) sont aussi racines de \( P(x) = 0 \).
+
+Or les racines de \( x^2 - x - 2 = 0 \) sont \( x_1 = -1 \) et \( x_2 = 2 \).
+
+\[
+\begin{cases}
+P(-1) = 0 \\
+P(2) = 0
+\end{cases}\implies 
+\begin{cases}
+2(-1)^3 + a(-1)^2 + b(-1) - 6 = 0 \\
+2(2)^3 + a(2)^2 + b(2) - 6 = 0 
+\end{cases}\implies 
+\begin{cases}
+-2 + a - b - 6 = 0 \\
+16 + 4a + 2b - 6 = 0
+\end{cases}
+\]
+\[
+\begin{cases}
+a - b  = 8 \\
+4a + 2b = -10
+\end{cases}\implies 
+\begin{cases}
+a - b  = 8 \\
+2a + b = -5
+\end{cases}
+\]
+
+\[
+\underline{
+\begin{cases}
+a - b  = 8 \\
+2a + b = -5
+\end{cases}
+}\\
+\]
+\begin{center}
+$3a=3 \implies a=1$\\
+\text{Remplaçons $a$ dans  $a - b  = 8 \implies b=-7$ }
+Donc \( P(x) = 2x^3 + x^2 - 7x - 6 \)
+\end{center}
+\item Une factorisation de \( P(x) \).
+\[
+\begin{array}{|c|c|c|c|c|}
+\hline
+ & 2 & 1 & -7 & -6  \\ 
+\hline
+-1 & \times & -2 & 1 & 6 \\ 
+\hline
+ & 2 & -1 & -6 & 0  \\
+\hline
+2 & \times & 4 & 6 &  \\ 
+\hline
+& 2 & 3 & 0 &   \\
+\hline
+\end{array}
+\]
+donc \( P(x) = (x+1)(x-2)(2x+3) \)
+
+\item Résolvons \( P(x) = 0 \)
+\[
+P(x) = 0 \implies (x+1)(x-2)(2x+3) = 0
+\]
+  
+\[
+x = -1 \quad \text{ou} \quad x = 2 \quad \text{ou} \quad x = -\frac{3}{2}
+\]
+
+Ainsi,  
+\[
+\textcolor{green}{\boxed{S_{\mathbb{R}} = \left\{ -1, 2, -\frac{3}{2} \right\}}}
+\]
+
+\item Déduisons-en les solutions de \( P(x^2 - 2) = 0 \)
+ \[ P(x) = (x+1)(x-2)(2x+3) \]
+\[
+P(x^2 - 2) = (x^2 - 2 + 1)(x^2 - 2 - 2)(2(x^2 - 2) + 3)
+\]
+
+\[
+P(x^2 - 2) = 0 \implies (x^2 - 1)(x^2-4)(2x^2 - 1) = 0
+\]
+ 
+\[
+x = -1 \quad \text{ou} \quad x = 1 \quad \text{ ou } \quad x=-2 \quad \text{ ou } \quad x=2\quad x = \sqrt{\frac{1}{2}} \quad \text{ou} \quad x = -\sqrt{\frac{1}{2}}
+\]
+
+Ainsi,  
+\[
+\textcolor{green}{\boxed{S_{\mathbb{R}} = \left\{ -1, 1, -2,2, \sqrt{\frac{1}{2}}, -\sqrt{\frac{1}{2}} \right\}}} 
+\]
+
+\item  Résolvons \( P(x) \leq 0 \)
+
+\begin{center}
+\begin{tikzpicture}
+    % Création du tableau
+    \tkzTabInit{$x$ / 1 , $x+1$ / 1 , $x-2$ / 1 , $2x+3$ / 1 , $P(x)$ / 1}
+      { $-\infty$, $-\frac{3}{2}$, $-1$, $2$, $+\infty$ }
+
+    % Ligne x+1
+    \tkzTabLine{ , - ,  , - , z ,+, ,+, }
+    % Ligne x-2
+    \tkzTabLine{ , - ,  , - ,  ,-, z,+, }
+    % Ligne 2x+3
+    \tkzTabLine{ , - , z , + ,  ,+, ,+, }
+    % Ligne P(x)
+    \tkzTabLine{ , - , z , + , z ,-, z,+, }
+\end{tikzpicture}
+\end{center}
+\[
+\textcolor{green}{\boxed{S = \left] -\infty ; -1\right] \cup \left[ -\frac{3}{2};2\right] }} 
+\]
+\item Déduisons-en les positions de \( P(3-2x) \leq 0 \)
+
+\[
+P(3-2x) \leq 0 \implies 
+\left( 3 - 2x + 1 \right)\left( 3 - 2x - 2 \right)\left[ 2\left( 3 - 2x \right) + 3 \right] \leq 0
+\]
+
+\[
+\left( -2x + 4 \right)\left( -2x + 1 \right)\left( -4x + 9 \right) \leq 0
+\]
+\begin{center}
+\begin{tikzpicture}
+    % Initialisation du tableau avec largeur ajustée pour la première colonne
+    \tkzTabInit[lgt=3]{$x$ / 1.5, $-2x+4$ / 1, $-2x+1$ / 1, $-4x+9$ / 1, $P(3-2x)$ / 1}
+      { $-\infty$, $\frac{1}{2}$, $2$, $\frac{9}{4}$, $+\infty$ }
+
+    % Ligne -2x+4
+    \tkzTabLine{ , + , + , + , z , -,-,-, }
+    % Ligne -2x+1
+    \tkzTabLine{ , + , z , - , - , -,-,-, }
+    % Ligne -4x+9
+    \tkzTabLine{ , + , + , z , - , -,z,-, }
+    % Ligne P(3-2x)
+    \tkzTabLine{ , + , z , - , z , +,z,-, }
+\end{tikzpicture}
+\end{center}
+\[
+\textcolor{green}{\boxed{S = \left[ \frac{1}{2} ; 2\right] \cup \left[ \frac{9}{4};+\infty\right] }} 
+\]
+\end{enumerate}
+\section*{\underline{Exercice 4 :} (06 points)}
+
+\begin{enumerate}
+    \item Déterminer l’ensemble $D_G$ des valeurs de $x$ pour lesquelles $G_x$, barycentre\\ des points $\{(A, 2x^2 - 3); (B, x); (C, -x)\}$, est défini. \hfill (0,75 pt)
+
+    \item Montrer que pour tout $x \in D_G$, on a l’égalité :
+    \(
+    \overrightarrow{AG_x} = \frac{-x}{2x^2 - 3} \overrightarrow{BC}.
+    \) \hfill (0,75 pt)
+
+    \item Tracer le triangle $ABC$ quelconque ainsi que le point $I$ milieu de $[BC]$. \hfill (0,75 pt)
+
+    \item Construire les points $G_1$ et $G_{-1}$ sur la figure précédente. \hfill (0,75 pt)
+
+    \item Montrer que le point $A$ est le milieu de $[G_1G_{-1}]$. \hfill (0,75 pt)
+
+    \item Déterminer l’ensemble $(\mathscr{E}_M)$ des points $M$ du plan tels que :\\
+    \(
+    \|-\overrightarrow{MA} + \overrightarrow{MB} - \overrightarrow{MC}\| = \|-\overrightarrow{MA} - \overrightarrow{MB} + \overrightarrow{MC}\|,
+    \)
+    puis justifier que $A \in (\mathscr{E}_M)$. \hfill (0,75 pt)
+
+    \item Exprimer $2\overrightarrow{MA} - \overrightarrow{MB} - \overrightarrow{MC}$ en fonction du vecteur $\overrightarrow{IA}$. \hfill (0,75 pt)
+
+    \item Déterminer l’ensemble $(\mathscr{E}'_M)$ des points $M$ du plan tels que :\\
+    \(
+    \|-\overrightarrow{MA} + \overrightarrow{MB} - \overrightarrow{MC}\| = \|2\overrightarrow{MA} - \overrightarrow{MB} - \overrightarrow{MC}\|.
+    \) \hfill (0,75 pt)
+\end{enumerate}
+
+\end{document}
