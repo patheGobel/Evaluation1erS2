@@ -22,6 +22,7 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{tkz-tab}
+\usetikzlibrary{calc} % Bibliothèque nécessaire pour les calculs de coordonnées
 %+++++++++++++++++++++++++++++++++++++++++++++++++
 \newcommand\circitem[1]{%
 \tikz[baseline=(char.base)]{
@@ -738,5 +739,167 @@ P(3-2x) \leq 0 \implies
     \|-\overrightarrow{MA} + \overrightarrow{MB} - \overrightarrow{MC}\| = \|2\overrightarrow{MA} - \overrightarrow{MB} - \overrightarrow{MC}\|.
     \) \hfill (0,75 pt)
 \end{enumerate}
+\section*{\underline{\textcolor{green}{Correction Exercice 4 :}(06 points)}}
+\begin{enumerate}
+    \item Déterminer l’ensemble $D_G$ des valeurs de $x$ pour lesquelles $G_x$, barycentre\\ des points $\{(A, 2x^2 - 3); (B, x); (C, -x)\}$, est défini. \hfill \textbf{(0,75 pt)}\\
+    $G_x$ existe ssi $2x^2 - 3+x-x \neq 0$
+    
+    $2x^2 - 3+x-x \neq 0 \implies 2x^2 - 3\neq 0  \implies  x\neq \sqrt{\frac{3}{2}} \text{ et } x\neq- \sqrt{\frac{3}{2}}$
+    
+    $D_G\neq\left\lbrace -\sqrt{\frac{3}{2}},\sqrt{\frac{3}{2}} \right\rbrace $
 
+\item On veut montrer que pour tout \( x \in D_G \), on a l'égalité :
+\[
+\overrightarrow{AG_x} = \frac{-x}{2x^2 - 3} \overrightarrow{BC}.
+\]
+
+\subsubsection*{Preuve :}
+$G_x=bary\{(A, 2x^2 - 3); (B, x); (C, -x)\}$
+
+\[
+(2x^2 - 3)\overrightarrow{G_xA}+x\overrightarrow{G_xB}-x\overrightarrow{G_xC}=\overrightarrow{O}
+\]
+En introduisant un point B sur $\overrightarrow{G_xC}$ on a:
+\[
+(2x^2 - 3)\overrightarrow{G_xA}+x\overrightarrow{G_xB}-x\overrightarrow{G_xB}-x\overrightarrow{CB}=\overrightarrow{O}
+\]
+\[
+(2x^2 - 3)\overrightarrow{G_xA}-x\overrightarrow{CB}=\overrightarrow{O}
+\]
+\[
+-(2x^2 - 3)\overrightarrow{AG_x}+x\overrightarrow{BC}=\overrightarrow{O}
+\]
+\[
+-(2x^2 - 3)\overrightarrow{AG_x}=-x\overrightarrow{BC}
+\]
+\[
+\overrightarrow{AG_x}=\frac{-x}{(2x^2 - 3)}\overrightarrow{BC}
+\]
+Ainsi, pour tout \( x \in D_G \), on a bien l'égalité :
+\[
+\overrightarrow{AG_x} = \frac{-x}{2x^2 - 3} \overrightarrow{BC}.
+\]
+\item Construisons le triangle $ABC$ quelconque ainsi que le point $I$ milieu de $[BC]$. \hfill (0,75 pt) 
+\begin{center}
+\begin{tikzpicture}[scale=1.5]
+    % Points du triangle
+    \coordinate [label=above:\(A\)] (A) at (1, 4); % Sommet A
+    \coordinate [label=below left:\(B\)] (B) at (0, 0); % Sommet B
+    \coordinate [label=below right:\(C\)] (C) at (4, 0); % Sommet C
+
+    % Milieu de [BC]
+    \coordinate [label=below:\(I\)] (I) at ($ (B)!0.5!(C) $); % Milieu de [BC]
+
+    % Points G1 et G2 tels que A soit le milieu de [G1G2]
+    \coordinate [label=above left:\(G_1\)] (G1) at ($(A) + (-2, 0)$); % Point G1 à gauche de A
+    \coordinate [label=above right:\(G_2\)] (G2) at ($(A) + (2, 0)$);  % Point G2 à droite de A
+
+    % Triangle
+    \draw[thick] (A) -- (B) -- (C) -- cycle;
+
+    % Segment [BC] et point I
+    \draw[thick] (B) -- (C);
+    \filldraw[red] (I) circle (1.5pt); % Point I
+
+    % Points A, B, C
+    \filldraw[blue] (A) circle (2pt);
+    \filldraw[blue] (B) circle (2pt);
+    \filldraw[blue] (C) circle (2pt);
+
+    % Droite parallèle à [BC] passant par A
+    \draw[thick, blue] ($(A) + (-3, 0)$) -- ($(A) + (3, 0)$);
+
+    % Segment [G1G2]
+    \draw[thick, green] (G1) -- (G2);
+
+    % Points G1 et G2
+    \filldraw[green] (G1) circle (2pt); % Point G1 en vert
+    \filldraw[green] (G2) circle (2pt); % Point G2 en vert
+
+\end{tikzpicture}
+\end{center}
+\item Construisons les points $G_1$ et $G_{-1}$ sur la figure précédente. \hfill (0,75 pt)
+\[
+\overrightarrow{AG_x}=\frac{-x}{(2x^2 - 3)}\overrightarrow{BC}
+\]
+
+\textbf{\underline{$G_1$}:}
+
+\[
+\overrightarrow{AG_1} = \frac{-1}{2.1^2 - 3} \overrightarrow{BC}.
+\]
+
+\[
+\overrightarrow{AG_1} = \overrightarrow{BC}.
+\]
+
+\textbf{\underline{$G_{-1}$}:}
+
+\[
+\overrightarrow{AG_{-1}} = \frac{1}{2.1^2 - 3} \overrightarrow{BC}.
+\]
+\[
+\overrightarrow{AG_{-1}} = -\overrightarrow{BC}.
+\]
+\item Montrons que le point $A$ est le milieu de $[G_1G_{-1}]$. \hfill (0,75 pt)\\
+D'après la question précédante: on a 
+$
+\begin{cases}
+\overrightarrow{AG_1} = \overrightarrow{BC}\\
+\overrightarrow{AG_{-1}} = -\overrightarrow{BC}
+\end{cases}
+$
+Par sommation, $\overrightarrow{AG_1} + \overrightarrow{AG_{-1}}= \overrightarrow{BC} - \overrightarrow{BC}$
+
+$\overrightarrow{AG_1} + \overrightarrow{AG_{-1}}= \overrightarrow{O}$ donc A est le milieu de $[G_1G_{-1}]$
+ \item Déterminons l’ensemble $(\mathscr{E}_M)$ des points $M$ du plan tels que :\\
+    \(
+    \|-\overrightarrow{MA} + \overrightarrow{MB} - \overrightarrow{MC}\| = \|-\overrightarrow{MA} - \overrightarrow{MB} + \overrightarrow{MC}\|,
+    \)
+    
+On a $G_x=bary\{(A, 2x^2 - 3); (B, x); (C, -x)\}$ 
+
+donc 
+
+$G_1=bary\{(A, -1); (B, 1); (C, -1)\}$ pour tout point M du plan on a:\\
+
+\(-\overrightarrow{MA} + \overrightarrow{MB} - \overrightarrow{MC} = (-1+1-1)\overrightarrow{MG_1} \)\\
+
+$G_{-1}=bary\{(A, -1); (B, -1); (C, 1)\}$ pour tout point M du plan on a:\\
+
+\( -\overrightarrow{MA} - \overrightarrow{MB} + \overrightarrow{MC} = (-1-1+1)\overrightarrow{MG_1} \)
+\vspace{1cm}\\
+\(
+\|-\overrightarrow{MA} + \overrightarrow{MB} - \overrightarrow{MC}\| =  \|-\overrightarrow{MA} - \overrightarrow{MB} + \overrightarrow{MC}\| \implies \| \overrightarrow{MG_1} \| =\|\overrightarrow{MG_{-1}}\|\implies MG_1 =MG_{-1}
+\)
+
+Donc l’ensemble $(\mathscr{E}_M)$ des points $M$ du plan tels que \( \|-\overrightarrow{MA} + \overrightarrow{MB} - \overrightarrow{MC}\| = \|-\overrightarrow{MA} - \overrightarrow{MB} + \overrightarrow{MC}\|\)est la médiatrice de $[G_1G_{-1}]$
+
+Justifions que $A \in (\mathscr{E}_M)$. \hfill (0,75 pt)
+
+Comme est le milieu de $[G_1G_{-1}]$ donc A est sur la médiatrice de $[G_1G_{-1}]$ donc  $A \in (\mathscr{E}_M)$.
+
+    \item Exprimons $2\overrightarrow{MA} - \overrightarrow{MB} - \overrightarrow{MC}$ en fonction du vecteur $\overrightarrow{IA}$. \hfill (0,75 pt)
+
+\begin{align*}
+2\overrightarrow{MA} - \overrightarrow{MB} - \overrightarrow{MC} &= 2\overrightarrow{MI}+2\overrightarrow{IA} - \overrightarrow{MI}-\overrightarrow{IB} - \overrightarrow{MI}-\overrightarrow{IC}\\
+&=2\overrightarrow{IA}-\overrightarrow{IB}-\overrightarrow{IC}\\
+\end{align*}
+$\text{Or} -\overrightarrow{IB}-\overrightarrow{IC}=\overrightarrow{O} \text{Car I milieu de [BC]}$
+
+$\text{Donc } 2\overrightarrow{MA} - \overrightarrow{MB} - \overrightarrow{MC}= 2\overrightarrow{IA}$
+    \item Déterminons l’ensemble $(\mathscr{E}'_M)$ des points $M$ du plan tels que :\\
+    \(
+    \|-\overrightarrow{MA} + \overrightarrow{MB} - \overrightarrow{MC}\| = \|2\overrightarrow{MA} - \overrightarrow{MB} - \overrightarrow{MC}\|.
+    \) \hfill (0,75 pt)
+    
+    \(
+    \|-\overrightarrow{MG_1}\| = \|2\overrightarrow{IA}\|.
+    \)
+    
+    \( MG_1 = 2IA \)
+    
+Donc l’ensemble $(\mathscr{E}'_M)$ des points $M$ du plan tels que \(
+    \|-\overrightarrow{MA} + \overrightarrow{MB} - \overrightarrow{MC}\| = \|2\overrightarrow{MA} - \overrightarrow{MB} - \overrightarrow{MC}\| \) est un cercle de centre \(G_1\) de rayon \(2IA\)
+\end{enumerate}
 \end{document}
