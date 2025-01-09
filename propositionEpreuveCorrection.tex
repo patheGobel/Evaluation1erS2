@@ -108,20 +108,6 @@ middle color = tcbcolback!80!black]
 \section*{\underline{\textcolor{green}{Correction Exercice 3 :} 4 points}}
 
 Soit l’équation $(E_m) : (m - 2)x^2 + (2m + 2)x + 10m - 14 = 0$, $m \in \mathbb{R}$.
-
-\begin{enumerate}
-    \item Discuter suivant les valeurs de $m$ le nombre de racines de $(E_m)$. \hfill (2pt)
-
-    \item Pour quelle(s) valeur(s) de $m$, les solutions $x_1$ et $x_2$ de $(E_m)$ :
-    \begin{enumerate}
-        \item sont de signes contraires ? \hfill (1pt)
-        \item sont strictement positives ? \hfill (1pt)
-    \end{enumerate}
-\end{enumerate}
-\[
-(E_m) : (m-2)x^3 + (2m+2)x + 10m - 4 = 0
-\]
-
 \begin{enumerate}
     \item Discutons suivant les valeurs de \(m\) le nombre de racines de \((E_m)\) :
     
@@ -195,24 +181,74 @@ m_1 = 1 \quad \text{et} \quad m_2 = 3
 \begin{tikzpicture}
     \tkzTabInit[lgt=2, espcl=2] % Adjust `lgt` and `espcl` as needed
     {$m$ / 1, $-3$ / 1, $3m^2 - 12m + 9$ / 1, $\Delta_m'$ / 1} % Correctly align headers
-    {$-\infty$, $-1$, $1$, $3$, $+\infty$} % Add commas between values
-    \tkzTabLine{,-,d,-,t,-,t,-} % Ensure the logical progression matches your analysis
-    \tkzTabLine{,+,d,+,z,-,z,+} % Same here
-    \tkzTabLine{,-,d,-,z,+,z,-}
+    {$-\infty$, $1$, $2$, $3$, $+\infty$} % Add commas between values
+    \tkzTabLine{,-,t,-,d,-,t,-} % Ensure the logical progression matches your analysis
+    \tkzTabLine{,+,z,-,d,-,z,+} % Same here
+    \tkzTabLine{,-,z,+,d,+,z,-}
 \end{tikzpicture}
 
-\subsection*{Discussion selon les valeurs de \(m\)}
+\textbf{Discussion selon les valeurs de \(m\)}
 
 \begin{itemize}
-    \item Si \(m \in \left]-\infty, 1\right[ \cup \left]3, +\infty\right[\setminus\{-1\}\), alors \(\Delta_m < 0\), donc \(\mathcal{S}_\mathbb{R} = \emptyset\).
+    \item[•] Si \(m \in \left]-\infty, 1\right[ \cup \left]3, +\infty\right[\), alors \(\Delta_m < 0\), donc \(\mathcal{S}_\mathbb{R} = \emptyset\).
     
-    \item Si \(m \in \left]1, 3\right[\), alors \(\Delta_m > 0\), donc \((E_m)\) admet une solution double.
+    \item[•] Si \(m \in \left]1, 3\right[\setminus\{2\}\), alors \(\Delta_m' > 0\), donc \((E_m)\) admet deux solutions distinctes.
     
-    \item Si \(m = 1\) ou \(m = 3\), alors \((E_m)\) admet deux solutions distinctes.
+    \item[•] Si \(m = 1\) ou \(m = 3\), alors \(\Delta_m' = 0\) donc \((E_m)\) admet une solution double.
+\end{itemize}
 \end{itemize}
 
-+++++++++++++++++++++
-    \end{itemize}
+\item Détermination le(s) valeur(s) de \(m\) pour le(s)quelle(s) \(x_{1}\) et \(x_{2}\):
+
+\textbf{Calcul de \(S\) et \(P\)}
+\[
+S = -\frac{b}{a} \quad \text{et} \quad P = \frac{c}{a}
+\]
+
+Avec :
+\[
+a = (m-2), \quad b = 2(m+1), \quad c = 10m - 14
+\]
+
+\[
+S = -\frac{2(m+1)}{m-2} \quad \text{et} \quad P = \frac{2(5m-7)}{m-2}
+\]
+\textbf{Étude des signes de \(S\) et \(P\)}
+
+\[
+\text{Posons : } S = 0 \quad \text{et} \quad P = 0
+\]
+
+\[
+\begin{aligned}
+S = 0 & \implies -2(m+1) = 0 \implies m = -1 \quad \text{avec} \quad m \neq 2 \\
+P = 0 & \implies 2(5m-7) = 0 \implies m = \frac{7}{5} \quad \text{avec} \quad m \neq 2
+\end{aligned}
+\] 
+\begin{tikzpicture}
+    \tkzTabInit[espcl=2, lgt=5] % `lgt` augmente globalement la taille des colonnes
+    {$m$ / 1 , $\Delta_m'=-3(3m^2 - 12m + 9)$ / 1 , $S=\frac{-2(m+1)}{m-2}$ / 1 , $P=\frac{10m-14}{m-2}$ / 1}
+    {$-\infty$,$-1$, $1$ ,$\frac{7}{5}$,$2$, $3$, $+\infty$}
+    \tkzTabLine{, -,t , -,z ,+, t,+, t , +, z, -}
+    \tkzTabLine{, -,z , +,t ,+, t,+, d , -, t, -}
+    \tkzTabLine{, +,t , +,t,+, z,-,d  ,+, t, +}
+\end{tikzpicture}
+\begin{enumerate}
+\item Signes contraires : \(P < 0\)
+
+\[
+\text{En effet, si } m \in \left]1, \frac{7}{5}\right[ \quad \text{alors } P < 0
+\]
+
+Donc \(x_1\) et \(x_2\) y sont de signes contraires.
+
+\item Signes positifs : \(P > 0\)
+
+\[
+\text{En effet, si } m \in\left]\frac{7}{5}, 2\right[ \quad \text{alors } P > 0 \text{et } S>0
+\]
+Donc \(x_1\) et \(x_2\) y  sont de signes strictement positifs.
+\end{enumerate}
 \end{enumerate}
 \section*{\underline{\textcolor{green}{Correction Exercice 3 :} 5 points}}
 \begin{enumerate}
@@ -458,20 +494,6 @@ x^2 - x - 2 = 0 \quad \encercle{5}
 \]
 \[
 \textcolor{green}{\boxed{S=S1 \cup S2 = \left]-\infty ; -1\right[  }} 
-\]
-\item $x^4 + x^2 - 12 \leq 0$
-
-Posons $x^4 + x^2 - 12 = 0$ et  $X=x^2$
-
-donc $X^4 + X - 12 = 0$
-
-$\Delta = 49$
-
-$X_{1}=\frac{-1+7}{2}$,$X_{1}=\frac{-1-7}{2}$
-
-$X_{1}=3$,$X_{1}=-4 	$
-\[
-\textcolor{green}{\boxed{S = \{ \sqrt{3} ; -\sqrt{3} \}   }} 
 \]
 \end{enumerate}
     \item Résolvons dans $\mathbb{R}^3$ par la méthode du Pivot de Gauss le système
