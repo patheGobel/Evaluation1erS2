@@ -172,6 +172,28 @@ x_1 = \frac{-m - \sqrt{\Delta_m'}}{m+3}, \quad x_2 = \frac{-m + \sqrt{\Delta_m'}
 \]
 \end{itemize}
 
+\textbf{Signe des racines de \( (E) \)}
+
+Cherchons $S$ et $P$
+$S=\frac{-2m}{m+3}$ et $P=\frac{m+5}{m+3}$
+
+
+
+\begin{tikzpicture}
+    \tkzTabInit[espcl=2, lgt=5] % `lgt` augmente globalement la taille des colonnes
+    {$m$ / 1 , $-8m-15$ / 1 , $S=\frac{-2m}{m+3}$ / 1 , $P=\frac{m+5}{m+3}$ / 1}
+    {$-\infty$,$-5$, $-3$ ,$-\frac{15}{8}$,$0$, $+\infty$}
+    \tkzTabLine{, +, t, +,d ,+, z,-, t , -}
+    \tkzTabLine{, -, t, -,d ,+, ,+, z , -}
+    \tkzTabLine{, +,z , -,d,+, z,+,t  , +}
+\end{tikzpicture}
+
+Sur $]-\infty ; -5]$ alors $P>0$ et $S<0$  donc \( (E) \) admet deux racines de signes négatif
+
+Sur $]-3 ; -\frac{15}{8}[$ alors $P>0$ et $S>0$  donc \( (E) \) admet deux racines de signes positifs
+
+Sur $]-5 ; -3[$ alors $P<0$  donc \( (E) \) admet deux racines de signes contraires
+
 \textbf{Dans le cas où \( \Delta_m > 0 \)}, déterminons \( m \) pour que :
 \[
 (2x_1 - 1)(2x_2 - 1) = 6 \quad \text{puisque} \quad x_1 + x_2 = 2
@@ -260,7 +282,7 @@ mS + 3S = -2m \\
 mP + 3P = m+5
 \end{cases}\implies
 \begin{cases}
-m(S + 2) = 3S \\
+m(S + 2) = -3S \\
 m(P - 1) = 5 - 3P
 \end{cases}
 \]
@@ -279,14 +301,14 @@ Par égalité des deux expressions de $m$, on obtient :
 \]
 \[
 \begin{aligned}
-  -3S(P-1) &= 5 - 3P(S+2) \\
-  -3P + 3S &= 5S + 10 - 3PS - 6P \\
-  2S - 6P &= 10 \\
-  S - 3P -5&= 0
+  -3S(P-1) &= (5 - 3P)(S+2) \\
+  -3PS + 3S &= 5S + 10 - 3PS - 6P \\
+  2S - 6P & + 10 = 0 \\
+  S - 3P + 5&= 0
 \end{aligned}
 \]
 \begin{center}
-\textcolor{green}{\boxed{S - 3P -5= 0}}
+\textcolor{green}{\boxed{S - 3P + 5 = 0}}
 \end{center}
 \end{enumerate}
 
@@ -384,21 +406,22 @@ Ainsi,
 \]
 
 \item Déduisons-en les solutions de \( P(x^2 - 2) = 0 \)
+ \[ P(x) = (x+1)(x-2)(2x+3) \]
 \[
-P(x^2 - 2) = (x^2 - x + 1)(x^2 - x - 2)(2(x^2 - x) + 3)
+P(x^2 - 2) = (x^2 - 2 + 1)(x^2 - 2 - 2)(2(x^2 - 2) + 3)
 \]
 
 \[
-P(x^2 - 2) = 0 \implies (x^2 - 1)(x^2)(2x^2 - 1) = 0
+P(x^2 - 2) = 0 \implies (x^2 - 1)(x^2-4)(2x^2 - 1) = 0
 \]
  
 \[
-x = -1 \quad \text{ou} \quad x = 1 \quad \text{ou} \quad x=0 \quad x = \sqrt{\frac{1}{2}} \quad \text{ou} \quad x = -\sqrt{\frac{1}{2}}
+x = -1 \quad \text{ou} \quad x = 1 \quad \text{ ou } \quad x=-2 \quad \text{ ou } \quad x=2\quad x = \sqrt{\frac{1}{2}} \quad \text{ou} \quad x = -\sqrt{\frac{1}{2}}
 \]
 
 Ainsi,  
 \[
-\textcolor{green}{\boxed{S_{\mathbb{R}} = \left\{ -1, 1, 0, \sqrt{\frac{1}{2}}, -\sqrt{\frac{1}{2}} \right\}}} 
+\textcolor{green}{\boxed{S_{\mathbb{R}} = \left\{ -1, 1, -2,2, \sqrt{\frac{1}{2}}, -\sqrt{\frac{1}{2}} \right\}}} 
 \]
 
 \item  Résolvons \( P(x) \leq 0 \)
@@ -407,14 +430,14 @@ Ainsi,
 \begin{tikzpicture}
     % Création du tableau
     \tkzTabInit{$x$ / 1 , $x+1$ / 1 , $x-2$ / 1 , $2x+3$ / 1 , $P(x)$ / 1}
-      { $-\infty$, $-1$, $-\frac{3}{2}$, $2$, $+\infty$ }
+      { $-\infty$, $-\frac{3}{2}$, $-1$, $2$, $+\infty$ }
 
     % Ligne x+1
-    \tkzTabLine{ , - , z , + ,  ,+, ,+, }
+    \tkzTabLine{ , - ,  , - , z ,+, ,+, }
     % Ligne x-2
     \tkzTabLine{ , - ,  , - ,  ,-, z,+, }
     % Ligne 2x+3
-    \tkzTabLine{ , - ,  , - , z ,+, +,+, }
+    \tkzTabLine{ , - , z , + ,  ,+, ,+, }
     % Ligne P(x)
     \tkzTabLine{ , - , z , + , z ,-, z,+, }
 \end{tikzpicture}
