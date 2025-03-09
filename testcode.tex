@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{tikz}
+\usetikzlibrary{calc} % Bibliothèque nécessaire pour les calculs de coordonnées
+\usepackage{amsmath}
+
+\begin{document}
+
+\section*{Figure : Triangle \( ABC \) avec le milieu \( I \) de \( [BC] \), une droite parallèle à \( [BC] \) passant par \( A \), et les points \( G_1 \) et \( G_2 \)}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.5]
+    % Points du triangle
+    \coordinate [label=above:\(A\)] (A) at (1, 4); % Sommet A
+    \coordinate [label=below left:\(B\)] (B) at (0, 0); % Sommet B
+    \coordinate [label=below right:\(C\)] (C) at (4, 0); % Sommet C
+
+    % Milieu de [BC]
+    \coordinate [label=below:\(I\)] (I) at ($ (B)!0.5!(C) $); % Milieu de [BC]
+
+    % Points G1 et G2 tels que A soit le milieu de [G1G2]
+    \coordinate [label=above left:\(G_1\)] (G1) at ($(A) + (-2, 0)$); % Point G1 à gauche de A
+    \coordinate [label=above right:\(G_2\)] (G2) at ($(A) + (2, 0)$);  % Point G2 à droite de A
+
+    % Triangle
+    \draw[thick] (A) -- (B) -- (C) -- cycle;
+
+    % Segment [BC] et point I
+    \draw[thick] (B) -- (C);
+    \filldraw[red] (I) circle (1.5pt); % Point I
+
+    % Points A, B, C
+    \filldraw[blue] (A) circle (2pt);
+    \filldraw[blue] (B) circle (2pt);
+    \filldraw[blue] (C) circle (2pt);
+
+    % Droite parallèle à [BC] passant par A
+    \draw[thick, blue] ($(A) + (-3, 0)$) -- ($(A) + (3, 0)$);
+
+    % Segment [G1G2]
+    \draw[thick, green] (G1) -- (G2);
+
+    % Points G1 et G2
+    \filldraw[green] (G1) circle (2pt); % Point G1 en vert
+    \filldraw[green] (G2) circle (2pt); % Point G2 en vert
+
+\end{tikzpicture}
+\end{center}
+
+\end{document}

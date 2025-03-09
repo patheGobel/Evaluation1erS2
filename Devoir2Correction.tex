@@ -97,235 +97,34 @@ middle color = tcbcolback!80!black]
 \node[draw=blue,line width=1.2pt,fill=purple,text=blue,inner sep=3mm,rounded corners,pattern=dots]at ([yshift=-2.5cm]current page.north) {\begingroup\setlength{\fboxsep}{0pt}\colorbox{white}{\begin{tabular}{|*1{>{\centering \arraybackslash}p{0.28\textwidth}} |*2{>{\centering \arraybackslash}p{0.2\textwidth}|} *1{>{\centering \arraybackslash}p{0.19\textwidth}|} }
 \hline
 \multicolumn{3}{|c|}{$\diamond$$\diamond$$\diamond$\ \textbf{Lycée de Dindéfélo}\ $\diamond$$\diamond$$\diamond$ }& \textbf{A.S. : 2024/2025} \\ \hline
-\textbf{Matière: Mathématiques}& \textbf{Niveau : 1}\textbf{$^{er}$S2} &\textbf{Date: 14/12/2024} & \textbf{Durée : 4 heures} \\ \hline
+\textbf{Matière: Mathématiques}& \textbf{Niveau : 1}\textbf{$^{er}$S2} &\textbf{Date: 21/01/2025} & \textbf{Durée : 4 heures} \\ \hline
 \multicolumn{4}{|c|}{\parbox[c]{10cm}{\begin{center}
-\textbf{{\Large\sffamily Devoir n$ ^{\circ} $ 1 Du 1$ ^\text{\bf er} $ Semestre}}
+\textbf{{\Large\sffamily Devoir n$ ^{\circ} $ 2 Du 1$ ^\text{\bf er} $ Semestre}}
 \end{center}}} \\ \hline
 \end{tabular}}\endgroup};
 \end{tikzpicture}
 \vspace{3cm}
 
-\section*{\underline{Exercice 1 :} 3 points}
-Soit \( m \) un nombre réel. On considère l’équation d’inconnue \( x \) :
+\section*{\underline{Exercice 1 :} 3 pts [\textit{ Déjà corrigé en classe par moi-même} ]}
+Soit \( ABC \) un triangle tel que \( AB = 4\,\text{cm} \) et \( BC = 5\,\text{cm} \).
 
-\( (E) \) \( (m+3)x^{2} +2mx + m + 5 = 0\)
+On donne \( I = \text{bar} \{(A,3), (B,-2)\} \) et \( J = \text{bar} \{(B,-2), (C,3)\} \), soit \( G \) le point défini par :
+\[
+3\overrightarrow{GA} - 2\overrightarrow{GB} + 3\overrightarrow{GC} = \overrightarrow{0}.
+\]
+
 \begin{enumerate}
-
-\item[a)] Discuter suivant les valeurs de \( m \), l’existence, le nombre et le signe des racines de \( (E) \) 
-
-Dans le cas où \( (E) \) admet deux racines distinctes \( x_{2} \) et \( x_{2} \) , peut-on déterminer \( m \) pour que:
-
-\( ( 2x_{1} - 1 ) (2x_{2}-1) = 6 \) puis \( x_{1}^{2} + x_{2}^{2} = 2 \)
-
-\item[b)]Trouver une relation indépendante de \( m \) entre \( x_{2} \) et \( x_{2} \)
-\end{enumerate}
-\section*{\underline{\textcolor{green}{Correction Exercice 1 :} 3 points}}
-Soit \( m \) un nombre réel. On considère l’équation d’inconnue \( x \) :
-
-\( (E_{m}) \):\( (m+3)x^{2} +2mx + m + 5 = 0\)
-\begin{enumerate}
-
-\item[a)] Discutons suivant les valeurs de \( m \), l’existence, le nombre et le signe des racines de \( (E) \) 
-
-\begin{itemize}
-\item si \( (m+3) = 0 \implies m = -3 \) alors l'équation \( (E_{m}) \) est du $1^{\text{er}}$ degré et devient\( (E_{-3}) \)\\
-\( (E_{-3}) \) : \(  2(-3)x - 3 + 5 = 0\)\\
-\( (E_{-3}) \) : \(  -6x +2 = 0\)\\
-\( (E_{-3}) \) : \(  x = \frac{1}{3}\) \textbf{0,5 pt}
-\item si \( (m+3) \neq 0 \implies m \neq -3 \) alors l'équation \( (E_{m}) \) est du $2^{\text{nd}}$ degré\\
-Chechons \(\Delta_{m}'\)
-
-\begin{align*}
-\Delta_{m}'&=(m)^{2}-(m+3)(m+5)\\
-					&=m^{2}-(m^{2}+5m+3m+15)\\
-					&=m^{2}-m^{2}-8m-15\\
-					&=-8m-15\\
-\end{align*}
-Chechons le signe de \(\Delta_{m}'\). Pour ce faire, posons \(\Delta_{m}'=0\)
-
-\( \Delta_{m}'=0 \implies -8m-15=0 \implies m=\frac{-15}{8}\) 
-\end{itemize}
-\vspace{0.5cm}
-
-\noindent \textbf{Tableau de signe :}
-
-\begin{tikzpicture}
-    \tkzTabInit[espcl=2, lgt=5] % `lgt` augmente globalement la taille des colonnes
-    {$m$ / 1 , $-8m-15$ / 1}
-    {$-\infty$, $-\frac{15}{8}$, $+\infty$}
-    \tkzTabLine{, +, z, -, }
-\end{tikzpicture}
-
-\vspace{0.5cm}
-
-\noindent \textbf{Résultats :}
-
-\begin{itemize}
-    \item Si $m \in \left]-\frac{15}{8}, +\infty\right[ \Rightarrow \Delta_m' < 0$ donc $(E_m)$ n'admet pas de solution et $S = \emptyset$.
-    \item Si $m = -\frac{15}{8} \Rightarrow \Delta_m' = 0$ donc $(E_m)$ admet une racine double $x_{0}=\frac{-m}{m+3}$.
-
-		\item \( m \in \left]-\infty, -\frac{15}{8} \right[ \setminus \{-3\} \) alors \( \Delta_m > 0 \), donc :
-
-L'équation (Em) admet deux racines \(x_1\) et \(x_2\) telles que :
-\[
-x_1 = \frac{-m - \sqrt{\Delta_m'}}{m+3}, \quad x_2 = \frac{-m + \sqrt{\Delta_m'}}{m+3}
-\]
-\end{itemize}
-
-\textbf{Signe des racines de \( (E) \)}
-
-Cherchons $S$ et $P$
-$S=\frac{-2m}{m+3}$ et $P=\frac{m+5}{m+3}$
-
-\[
-\begin{cases}
-S=0 \\
-P=0
-\end{cases} \implies 
-\begin{cases}
-\frac{-2m}{m+3} = 0  \\
-\frac{m+5}{m+3} = 0 
-\end{cases} \implies 
-\begin{cases}
-m = 0 \text{ et } m \neq -3\\
-m = -5 \text{ et } m \neq -3
-\end{cases}
-\]
-
-\begin{tikzpicture}
-    \tkzTabInit[espcl=2, lgt=5] % `lgt` augmente globalement la taille des colonnes
-    {$m$ / 1 , $-8m-15$ / 1 , $S=\frac{-2m}{m+3}$ / 1 , $P=\frac{m+5}{m+3}$ / 1}
-    {$-\infty$,$-5$, $-3$ ,$-\frac{15}{8}$,$0$, $+\infty$}
-    \tkzTabLine{, +, t, +,d ,+, z,-, t , -}
-    \tkzTabLine{, -, t, -,d ,+, ,+, z , -}
-    \tkzTabLine{, +,z , -,d,+, z,+,t  , +}
-\end{tikzpicture}
-
-Sur $]-\infty ; -5]$ alors $P>0$ et $S<0$  donc \( (E) \) admet deux racines de signes négatif
-
-Sur $]-3 ; -\frac{15}{8}[$ alors $P>0$ et $S>0$  donc \( (E) \) admet deux racines de signes positifs
-
-Sur $]-5 ; -3[$ alors $P<0$  donc \( (E) \) admet deux racines de signes contraires
-
-\textbf{Dans le cas où \( \Delta_m > 0 \)}, déterminons \( m \) pour que :
-\[
-(2x_1 - 1)(2x_2 - 1) = 6 \quad \text{puisque} \quad x_1 + x_2 = 2
-\]
-\begin{itemize}
-
-\item $ \underline{(2x_1 - 1)(2x_2 - 1) = 6} $
-
-\[
-2x_1 (2x_2 - 1) - (2x_2 - 1) = 6
-\]
-
-\[
-4x_1 x_2 - 2x_1 - 2x_2 + 1 = 6
-\]
-
-\[
-4x_1 x_2 - 2(x_1 + x_2) = 5
-\]
-
-\[
-4P - SP = 5
-\]
-
-\[ \text{avec }
-S = \frac{-2m}{m+3} \quad \text{et} \quad P = \frac{m+5}{m+3}
-\]
-
-\[
-4 \left( \frac{m+5}{m+3} \right) - 2 \left( \frac{-2m}{m+3} \right) = 5
-\]
-
-\[
-\frac{4m + 20 + 4m}{m+3} = 5
-\]
-
-\[
-4m + 20 + 4m = 5m + 15
-\]
-
-\[
-3m = -5
-\]
-
-\[
-m = -\frac{5}{3}
-\]
-
-\textbf{Conclusion} :  
-Pour que \( (2x_1 - 1)(2x_2 - 1) = 6 \) soit vérifiée, il faut que :
-\(
-m = -\frac{5}{3}
-\)
-\newpage
-\item $ \underline{x_1^{2} + x_2^{2} = 2} $
-
-\begin{align*}
-\left( x_1 + x_2 \right)^2 - 2x_1x_2 &= 2\\
-S^2 - 2P &= 2\\
-\left( \frac{2m}{m+3} \right)^2 - 2 \left( \frac{m+5}{m+3} \right) &= 2\\
-\frac{4m^2}{(m+3)^2} - \frac{2(m+5)(m+3)}{(m+3)^2} &= 2\\
-\frac{4m^2 - \left( 2m^2 + 16m + 30 \right)}{(m+3)^2} &= 2\\
-2m^2 - 16m - 30 &= 2(m+3)^2\\
-2m^2 - 16m - 30 &= 2m^2 + 12m + 18\\
--28m &= 48\\
-m = -\frac{48}{28} &= -\frac{12}{7}\\
-\end{align*}
-\textbf{Conclusion} :  
-Pour que \( x_1^{2} + x_2^{2} = 2 \) soit vérifiée, il faut que :\( m = -\frac{12}{7} \)
-\end{itemize}
-
-\item[b)] Une relation indépendante de $m$ entre $x_1$ et $x_2$
-
-\[
-S = -\frac{2m}{m+3} \quad \text{et} \quad P = \frac{m+5}{m+3}
-\]
-
-Nous avons le système suivant :
-\[
-\begin{cases}
-S=\frac{-2m}{m+3} \\
-P=\frac{m+5}{m+3}
-\end{cases} \implies 
-\begin{cases}
-mS + 3S = -2m \\
-mP + 3P = m+5
-\end{cases}\implies
-\begin{cases}
-m(S + 2) = -3S \\
-m(P - 1) = 5 - 3P
-\end{cases}
-\]
-
-En isolant $m$ dans chaque équation :
-\[
-\begin{cases}
-m = -\frac{3S}{S + 2} \\
-m = \frac{5 - 3P}{P - 1}
-\end{cases}
-\]
-
-Par égalité des deux expressions de $m$, on obtient :
-\[
--\frac{3S}{S + 2} = \frac{5 - 3P}{P - 1}.
-\]
-\[
-\begin{aligned}
-  -3S(P-1) &= (5 - 3P)(S+2) \\
-  -3PS + 3S &= 5S + 10 - 3PS - 6P \\
-  2S - 6P & + 10 = 0 \\
-  S - 3P + 5&= 0
-\end{aligned}
-\]
-\begin{center}
-\textcolor{green}{\boxed{S - 3P + 5 = 0}}
-\end{center}
+    \item Montrer que \( G = \text{bar} \{(I,-1), (C,3)\} \). \hfill \textbf{0,75 pt}
+    \item Déterminer et construire l'ensemble des points \( P \) du plan tels que :
+    \begin{enumerate}
+        \item \( \|3\overrightarrow{MA} - 2\overrightarrow{MB} + 3\overrightarrow{MC}\| = AB \),\hfill \textbf{0,75 pt}
+        \item \( \|18\overrightarrow{MA} - 12\overrightarrow{MB}\| = \|\overrightarrow{MA} - \overrightarrow{MB}\| \),\hfill \textbf{0,75 pt}
+        \item \( \|3\overrightarrow{MA} - 9\overrightarrow{MB}\| = \| -2\overrightarrow{MB} + 3\overrightarrow{MC}\| \).\hfill \textbf{0,75 pt}
+    \end{enumerate}
 \end{enumerate}
 
-\section*{\underline{Exercice 2 :} 7 points}
+\section*{\underline{Exercice 2 :} 7 points [\textit{ Exercice 2 du devoir 1 déjà corrigé en classe } ]}
+
 On donne \( P(x) = 2x^3 + ax^2 + bx - 6 \) où \( a \) et \( b \) sont des réels.
 \begin{enumerate}
     \item Trouver les réels \( a \) et \( b \) pour que le polynôme \( P(x) \) soit divisible par \( x^2 - x - 2 \).
@@ -336,7 +135,6 @@ On donne \( P(x) = 2x^3 + ax^2 + bx - 6 \) où \( a \) et \( b \) sont des réel
     \item En déduire les solutions de l'inéquation \( P(3 - 2x) \leq 0 \).
     \item Résoudre dans \( \mathbb{R} \) l'inéquation \( \frac{2x^3 + x^2 - 7x - 6}{-x + 1} > 0 \).
 \end{enumerate}
-
 \section*{\underline{\textcolor{green}{Correction Exercice 2 :} 7 points}}
 
 On donne \( P(x) = 2x^3 + ax^2 + bx - 6 \) où \( a \) et \( b \) des réels.
@@ -456,7 +254,7 @@ Ainsi,
 \end{tikzpicture}
 \end{center}
 \[
-\textcolor{green}{\boxed{S = \left] -\infty ; -1\right] \cup \left[ -\frac{3}{2};2\right] }} 
+\textcolor{green}{\boxed{S = \left] -\infty ; -\frac{3}{2}\right] \cup \left[ -1;2\right] }} 
 \]
 \item Déduisons-en les positions de \( P(3-2x) \leq 0 \)
 
@@ -492,22 +290,22 @@ P(3-2x) \leq 0 \implies
 \begin{tikzpicture}
     % Initialisation du tableau avec une largeur ajustée pour la première colonne
     \tkzTabInit[lgt=2]{$x$ / 1.5, $P(x)$ / 1, $-x+1$ / 1, $\frac{P(x)}{-x+1}$ / 1}
-      { $-\infty$, $-1$, $-\frac{3}{2}$, $1$, $2$, $+\infty$ }
+      { $-\infty$, $-\frac{3}{2}$, $-1$, $1$, $2$, $+\infty$ }
 
     % Ligne P(x)
-    \tkzTabLine{ , - , z , + , z ,-, ,- ,z,+ }
+    \tkzTabLine{ , - , z , + , z ,-,t ,- ,z,+ }
     % Ligne -x+1
-    \tkzTabLine{ , + ,  , + ,  , +, z , -, , - }
+    \tkzTabLine{ , + , t , + , t , +, z , -, t , - }
     % Ligne P(x)/(-x+1)
     \tkzTabLine{ , - , z , + , z , - , d ,+ ,z,- }
 \end{tikzpicture}
 \end{center}
 
 \[
-\textcolor{green}{\boxed{S = \left]  -1, -\frac{3}{2}\right[   \cup \left] 1, 2\right[  }} 
+\textcolor{green}{\boxed{S = \left]  -\frac{3}{2}, -1\right[   \cup \left] 1, 2\right[  }} 
 \]
 \end{enumerate}
-\section*{\underline{Exercice 3 :} 8 points}
+\section*{\underline{Exercice 3 :} 8 pts 	[\textit{Exercice 3 du devoir 1 déjà corrigé en classe} ]}
 
 \begin{enumerate}
     \item Résoudre dans $\mathbb{R}$ les équations suivantes.
@@ -541,6 +339,7 @@ P(3-2x) \leq 0 \implies
     \end{cases}
     \]
 \end{enumerate}
+
 \section*{\underline{\textcolor{green}{Correction Exercice 3 :} 8 points}}
 \begin{enumerate}
     \item Résolvons dans $\mathbb{R}$ les équations suivantes.
@@ -677,11 +476,11 @@ x^2 + 2x - 3 = 0 \quad (2) \\
       {$-\infty$, $-3$, $1$, $\frac{3}{2}$, $3$, $+\infty$}
 
     % Ligne x-3
-    \tkzTabLine{ , - ,  , - ,  , -,,-,z,+ }
+    \tkzTabLine{ , - , t , - , t , -, t ,-,z,+ }
     % Ligne x^2+2x-3
-    \tkzTabLine{ , + , z , - , z , +,,+,+,+ }
+    \tkzTabLine{ , + , z , - , z , +, t ,+,+,+ }
     % Ligne 2x-3
-    \tkzTabLine{ , - ,  , - ,  , -,z,+,+,+ }
+    \tkzTabLine{ , - , t , - , t , -,z,+,+,+ }
 \end{tikzpicture}
 \end{flushleft}
 \begin{center}
@@ -722,15 +521,15 @@ x^2 + 2x + 1 \leq 0 \textbf{(3)}
 \begin{flushleft}
 \begin{tikzpicture}
     % Initialisation du tableau avec colonnes ajustées
-    \tkzTabInit[lgt=2.5]{$x$ / 1, $-5x+1$ / 0.8, $x^2 - 3x + 8$ / 0.8, $x^2 + 2x + 1$ / 0.8}
+    \tkzTabInit[lgt=2.5]{$x$ / 1, $-5x+1$ / 0.8, $x^2 - 3x + 2$ / 0.8, $x^2 + 2x + 1$ / 0.8}
       {$-\infty$, $-1$, $\frac{1}{5}$, $1$, $2$, $+\infty$}
 
     % Ligne -5x+1
-    \tkzTabLine{ , + ,  , + , z , - ,,-,,- }
+    \tkzTabLine{ , + , t , + , z , - , t ,-, t ,- }
     % Ligne x^2-3x+8
-    \tkzTabLine{ , + ,  , + ,  , + ,z,-,z,+ }
+    \tkzTabLine{ , + , t , + , t , + ,z,-,z,+ }
     % Ligne x^2+2x+1
-    \tkzTabLine{ , + , z , + ,  , + , ,+, ,+ }
+    \tkzTabLine{ , + , z , + , t , + , t ,+, t ,+ }
 \end{tikzpicture}
 \end{flushleft}
 
@@ -789,15 +588,15 @@ x - 1  = 0 \quad \encercle{2}\\
       {$-\infty$, $-1$, $1$, $2$, $3$, $+\infty$}
 
     % Ligne -5x+1
-    \tkzTabLine{ , + , z , - , - , - ,z,+,,+ }
+    \tkzTabLine{ , + , z , - , t , - ,z,+,t,+ }
     % Ligne x^2-3x+8
-    \tkzTabLine{ , + , + , + , z , - , ,-, ,- }
+    \tkzTabLine{ , - , t , - , z , + , t ,+, t,+ }
     % Ligne x^2+2x+1
-    \tkzTabLine{ , + ,  , + ,  , + ,  ,+,z ,- }
+    \tkzTabLine{ , - , t , - , t , - , t ,-,z ,+ }
 \end{tikzpicture}
 \end{flushleft}
 \[
-\textcolor{green}{\boxed{S1 = \left]-\infty ; -1\right[  }} 
+\textcolor{green}{\boxed{S1 = \left]3 ; +\infty\right[  }} 
 \]
 \underline{\textbf{Pour (S2):}}
 \[
@@ -823,16 +622,16 @@ x^2 - x - 2 = 0 \quad \encercle{5}
       {$-\infty$, $-1$, $1$, $2$, $+\infty$}
 
     % Ligne -5x+1
-    \tkzTabLine{ , - ,  , - , z , + , ,+, }
+    \tkzTabLine{ , - , t , - , z , + ,t ,+, }
     % Ligne x^2-x-2
-    \tkzTabLine{ , + , z , - ,  , - ,z ,+ }
+    \tkzTabLine{ , + , z , - , t , - ,z ,+ }
 \end{tikzpicture}
 \end{flushleft}
 \[
 \textcolor{green}{\boxed{S2 = \left]-\infty ; -1\right[  }} 
 \]
 \[
-\textcolor{green}{\boxed{S=S1 \cup S2 = \left]-\infty ; -1\right[  }} 
+\textcolor{green}{\boxed{S=S1 \cup S2 = \left]3 ; +\infty\right[ \cup \left]-\infty ; -1\right[  }} 
 \]
 \item $x^4 + x^2 - 12 \leq 0$
 
@@ -993,90 +792,9 @@ Choisison $x - 2y + z = 6$ comme pivot
 \textcolor{green}{\boxed{S = (1,-1,3)   }} 
 \]
 \end{enumerate}
-\section*{\underline{Exercice 4 :} 1,5 point}
 
-\begin{enumerate}
-    \item $ABCD$ est un carré de centre $O$. Faire une figure avec $AB = 4 \, \text{cm}$.
-    
-    \item Soit le système de points pondérés suivants : $\{(A, 2); (B, 3); (C, 1); (D, -1)\}$.
-    \begin{enumerate}
-        \item Justifier qu’il existe un point $G$ barycentre de ce système. \hfill \textbf{0,25 pt}
-        
-        \item En déduire une relation vectorielle caractérisant le barycentre $G$. \hfill \textbf{0,5 pt}
-   
-        \item Construire $G$. \hfill \textbf{0,75 pt}
-    \end{enumerate}
-\end{enumerate}
+\section*{\underline{Exercice 4 :} 1,5 pt [\textit{ Exercice d'application 1 du cours sur produit scalaire} ]} 
+Soient $A(-2, -3)$, $B(1, 1)$, $C(-3, -1)$, $D(4, 2)$, $E(-4, -3)$ et $E(2, -1)$ dans un repère orthonormé.
 
-\section*{\underline{\textcolor{green}{Correction Exercice 4 :} 1,5 points}}
-\begin{enumerate}
-    \item \textbf{Figure :} On dessine un carré \(ABCD\) avec \(AB = 4 \, \text{cm}\). Le centre du carré \(O\) est l’intersection des diagonales. (La figure est à dessiner sur le papier ou à l’aide d’un logiciel).
-
-    \item \textbf{Existence du barycentre :} 
-    Un barycentre \( G \) existe pour ce système si la somme des coefficients pondérateurs est non nulle :
-    \[
-    S = 2 + 3 + 1 - 1 = 5.
-    \]
-    Comme \( S \neq 0 \), il existe bien un point \( G \) barycentre du système \(\{(A, 2); (B, 3); (C, 1); (D, -1)\}\).
-    \item \textbf{Relation vectorielle caractérisant \( G \) :} 
-    Par définition du barycentre, on a la relation suivante :
-    \[
-    2 \overrightarrow{GA} + 3 \overrightarrow{GB} +  \overrightarrow{GC} -  \overrightarrow{GD} = \overrightarrow{0}.
-    \]
-    Cela signifie que le barycentre \( G \) est un point unique tel que la somme pondérée des vecteurs est nulle.
-
-	\item Construction de \(G\)
-	\[\text{Soit } G_{1}=bar\left\lbrace (A, 2);(C, 1) \right\rbrace \text{donc } \overrightarrow{AG_{1}}=\frac{1}{3}\overrightarrow{AC}\]
-	\[\text{Soit } G_{2}=bar\left\lbrace (B, 3);(D, -1) \right\rbrace \text{donc } \overrightarrow{BG_{2}}=\frac{-1}{2}\overrightarrow{BD} \]
-    \[
-		G=bar\left\lbrace (G_{1}, 3);(G_{2}, 2) \right\rbrace
-    \]
-    \[
-		\overrightarrow{GG_{1}}=\frac{2}{3}\overrightarrow{G_{1}G_{2}}
-    \]
-\begin{center}
-\begin{tikzpicture}[scale=1.5]
-    % Carré ABCD
-    \coordinate (A) at (0, 0);
-    \coordinate (B) at (4, 0);
-    \coordinate (C) at (4, 4);
-    \coordinate (D) at (0, 4);
-    \coordinate (O) at (2, 2); % Centre du carré
-    
-    % Dessin du carré
-    \draw[thick] (A) -- (B) -- (C) -- (D) -- cycle;
-    \draw[dashed] (A) -- (C);
-    \draw[dashed] (B) -- (D);
-    
-    % Points du carré
-    \filldraw[black] (A) circle (1pt) node[below left] {\(A\)};
-    \filldraw[black] (B) circle (1pt) node[below right] {\(B\)};
-    \filldraw[black] (C) circle (1pt) node[above right] {\(C\)};
-    \filldraw[black] (D) circle (1pt) node[above left] {\(D\)};
-    \filldraw[black] (O) circle (1pt) node[below] {\(O\)};
-    
-    % Pondérations
-    \node at (-0.5, -0.5) {\(2\)};
-    \node at (4.5, -0.5) {\(3\)};
-    \node at (4.5, 4.5) {\(1\)};
-    \node at (-0.5, 4.5) {\(-1\)};
-    
-    % Calcul des coordonnées de G
-    \coordinate (G) at (1.8, 1.2); % Coordonnées approximatives après pondération
-    
-    % Point G
-    \filldraw[red] (G) circle (1.5pt) node[below] {\(G\)};
-    
-    % Liaisons pondérées
-    \draw[->, thin, blue] (A) -- (G);
-    \draw[->, thin, blue] (B) -- (G);
-    \draw[->, thin, blue] (C) -- (G);
-    \draw[->, thin, blue] (D) -- (G);
-\end{tikzpicture}
-\end{center}
-
-Le point \(G\) est construit en respectant la règle de pondération, avec une approximation visuelle des coordonnées.
-
-\end{enumerate}
-
+En utilisant deux méthodes différentes (une méthode par triangle), montrer que le triangle $ABC$ est un triangle rectangle en $C$, mais que $FDE$ ne l'est pas en $E$.
 \end{document}

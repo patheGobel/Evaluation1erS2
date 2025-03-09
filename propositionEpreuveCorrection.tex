@@ -69,6 +69,11 @@ middle color = tcbcolback!80!black]
 \usepackage{fancyhdr}
 \usepackage{eso-pic}         % Pour ajouter des éléments en arrière-plan
 % Commande pour ajouter du texte en arrière-plan
+\AddToShipoutPicture{
+    \AtTextCenter{%
+        \makebox[0pt]{\rotatebox{80}{\textcolor[gray]{0.7}{\fontsize{5cm}{5cm}\selectfont PGB}}}
+    }
+}
 \usepackage{lastpage}
 \fancyhf{}
 \pagestyle{fancy}
@@ -79,7 +84,7 @@ middle color = tcbcolback!80!black]
 \color{blue}\ding{45}\ \textbf{2025}
 }
 \fancyfoot[L]{
-\color{blue}\ding{45}\ \textbf{Prof:}
+\color{blue}\ding{45}\ \textbf{Prof:M. BA}
 }
 \cfoot{\bf
 \thepage /
@@ -92,7 +97,7 @@ middle color = tcbcolback!80!black]
 \begin{tikzpicture}[overlay,remember picture]
 \node[draw=blue,line width=1.2pt,fill=purple,text=blue,inner sep=3mm,rounded corners,pattern=dots]at ([yshift=-2.5cm]current page.north) {\begingroup\setlength{\fboxsep}{0pt}\colorbox{white}{\begin{tabular}{|*1{>{\centering \arraybackslash}p{0.28\textwidth}} |*2{>{\centering \arraybackslash}p{0.2\textwidth}|} *1{>{\centering \arraybackslash}p{0.19\textwidth}|} }
 \hline
-\multicolumn{3}{|c|}{$\diamond$$\diamond$$\diamond$\ \textbf{IA Kédougou}\ $\diamond$$\diamond$$\diamond$ }& \textbf{A.S. : 2024/2025} \\ \hline
+\multicolumn{3}{|c|}{$\diamond$$\diamond$$\diamond$\ \textbf{Lycée de Dindéfélo}\ $\diamond$$\diamond$$\diamond$ }& \textbf{A.S. : 2024/2025} \\ \hline
 \textbf{Matière: Mathématiques}& \textbf{Niveau : 1}\textbf{$^{er}$S2} &\textbf{Date: 11/01/2025} & \textbf{Durée : 4 heures} \\ \hline
 \multicolumn{4}{|c|}{\parbox[c]{10cm}{\begin{center}
 \textbf{{\Large\sffamily Correction Composition Du 1$ ^\text{\bf er} $ Semestre}}
