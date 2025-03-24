@@ -1,6 +1,11 @@
 \documentclass[12pt,a4paper]{article}
 \usepackage{amsmath,amssymb,mathrsfs,tikz,times,pifont}
 \usepackage{enumitem}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
 \newcommand\circitem[1]{%
 \tikz[baseline=(char.base)]{
 \node[circle,draw=gray, fill=red!55,
@@ -117,17 +122,17 @@ Dans le plan, on considère le triangle \( ABC \) tel que \( AB = 2 \), \( AC = 
         
         \( 
         \begin{aligned}    
-       \overrightarrow{AB}.\overrightarrow{AC}&=\frac{1}{2}\left( 2^{2}+(4\sqrt{2})^{2}-(5\sqrt{2})^{2}\right) \\
-       \overrightarrow{AB}.\overrightarrow{AC}&=\frac{1}{2}\left( 4+32-50\right)\\
-       \overrightarrow{AB}.\overrightarrow{AC}&=\frac{1}{2}\left( 36-50\right)\\
-       \overrightarrow{AB}.\overrightarrow{AC}&=\frac{1}{2}\left( -14\right)\\
-       \overrightarrow{AB}.\overrightarrow{AC}&=-7
+       \overrightarrow{AB}.\overrightarrow{AC}&=\frac{1}{2}\left( 2^{2}+(4\sqrt{2})^{2}-(2\sqrt{5})^{2}\right) \\
+       \overrightarrow{AB}.\overrightarrow{AC}&=\frac{1}{2}\left( 4+32-20\right)\\
+       \overrightarrow{AB}.\overrightarrow{AC}&=\frac{1}{2}\left( 36-20\right)\\
+       \overrightarrow{AB}.\overrightarrow{AC}&=\frac{1}{2}\left( 16\right)\\
+       \overrightarrow{AB}.\overrightarrow{AC}&=8
         \end{aligned}
         \)
         
 \begin{resultbox}
     \[
-    \mathbf{\overrightarrow{AB}.\overrightarrow{AC}=-7}
+    \mathbf{\overrightarrow{AB}.\overrightarrow{AC}=8}
     \]
 \end{resultbox} 
 
@@ -136,15 +141,15 @@ Dans le plan, on considère le triangle \( ABC \) tel que \( AB = 2 \), \( AC = 
         \( 
 \begin{aligned}
         \overrightarrow{AB}.\overrightarrow{AC}= AB\times AC \times \cos \widehat{BAC} &\implies \cos \widehat{BAC}=\frac{\overrightarrow{AB}.\overrightarrow{AC}}{AB\times AC}\\
-        &\implies \cos \widehat{BAC}=\frac{-7}{2\times 4\sqrt{2}}\\
-        &\implies \cos \widehat{BAC}=\frac{-7}{8\sqrt{2}}\\
-        &\implies \cos \widehat{BAC}=\frac{-7\sqrt{2}}{16}\\
+        &\implies \cos \widehat{BAC}=\frac{8}{2\times 4\sqrt{2}}\\
+        &\implies \cos \widehat{BAC}=\frac{1}{\sqrt{2}}\\
+        &\implies \cos \widehat{BAC}=\frac{\sqrt{2}}{2}\\
 \end{aligned}
         \)
         
 \begin{resultbox}
     \[
-    \mathbf{cos \widehat{BAC}=\frac{-7\sqrt{2}}{16}}
+    \mathbf{cos \widehat{BAC}=\frac{\sqrt{2}}{2}}
     \]
 \end{resultbox} 
 
@@ -185,13 +190,35 @@ Dans le plan, on considère le triangle \( ABC \) tel que \( AB = 2 \), \( AC = 
           \[
 					\mathcal{E}=\{ C(I;\sqrt{2}) \}.
 					\]
+        \definecolor{wewdxt}{rgb}{0.43137254901960786,0.42745098039215684,0.45098039215686275}
+\definecolor{zzttqq}{rgb}{0.6,0.2,0}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\clip(-7.5806713030775255,5.111029105064376) rectangle (5.023498620895737,12.441522187479684);
+\fill[line width=2pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (-4.559315779104064,9.226795625986128) -- (-2.5593157791040637,9.226795625986128) -- (-0.5593157791040646,5.226795625986126) -- cycle;
+\draw [line width=2pt] (-4.559315779104064,9.226795625986128)-- (-2.5593157791040637,9.226795625986128);
+\draw [line width=2pt,color=zzttqq] (-4.559315779104064,9.226795625986128)-- (-2.5593157791040637,9.226795625986128);
+\draw [line width=2pt,color=zzttqq] (-2.5593157791040637,9.226795625986128)-- (-0.5593157791040646,5.226795625986126);
+\draw [line width=2pt,color=zzttqq] (-0.5593157791040646,5.226795625986126)-- (-4.559315779104064,9.226795625986128);
+\draw [line width=2pt] (-3.5593157791040637,9.226795625986128) circle (1.4142135623730951cm);
+\begin{scriptsize}
+\draw [fill=ududff] (-4.559315779104064,9.226795625986128) circle (2.5pt);
+\draw[color=ududff] (-4.495446941791641,9.40154778349264) node {$A$};
+\draw [fill=xdxdff] (-2.5593157791040637,9.226795625986128) circle (2.5pt);
+\draw[color=xdxdff] (-2.496221555678389,9.40154778349264) node {$B$};
+\draw [fill=wewdxt] (-0.5593157791040653,5.226795625986125) circle (2pt);
+\draw[color=wewdxt] (-0.4969961695651367,5.3866424813392495) node {$C$};
+\draw [fill=black] (-3.5593157791040637,9.226795625986128) circle (2pt);
+\end{scriptsize}
+\end{tikzpicture}
     \end{enumerate}
     
-    %\item Soit \( G \) le barycentre des points pondérés \( (A ; 2) \) ; \( (B ; -3) \) et \( \mathcal{F} = \{ M \in \mathbb{P} \ / \ 2MA^2 - 3MB^2 = 15 \} \)
-    %\begin{enumerate}
-        %\item Construire \( G \) et calculer \( GA \) et \( GB \). \hfill \textbf{(0,5+0,5 pt)}
+    \item Soit \( G \) le barycentre des points pondérés \( (A ; 2) \) ; \( (B ; -3) \) et \( \mathcal{F} = \{ M \in \mathbb{P} \ / \ 2MA^2 - 3MB^2 = 15 \} \)
+    \begin{enumerate}
+        \item Construisons \( G \) et calculer \( GA \) et \( GB \). \hfill \textbf{(0,5+0,5 pt)}
         %\item Montrer que \( 2MA^2 - 3MB^2 = -MG^2 + 24 \). \hfill \textbf{(01 pt)}
         %\item Déterminer l’ensemble \( \mathcal{F} \). \hfill \textbf{(0,5 pt)}
-    %\end{enumerate}
+    \end{enumerate}
 \end{enumerate}
 \end{document}
