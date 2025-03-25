@@ -4,6 +4,7 @@
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.15}
 \usepackage{mathrsfs}
+\usetikzlibrary{calc} % Permet de faire des calculs de coordonnées
 \usetikzlibrary{arrows}
 \pagestyle{empty}
 \newcommand\circitem[1]{%
@@ -155,12 +156,12 @@ Dans le plan, on considère le triangle \( ABC \) tel que \( AB = 2 \), \( AC = 
 
               \item L'ensemble des points \( M \) du plan tels que \( \overrightarrow{BA} \cdot \overrightarrow{MC} = 0 \).
 
-              \begin{resultbox}
-                \[
-                    \mathbf{\text{L'ensemble des points \( M \) du plan est la perpendiulaire à (AB) passant par C.} }
-                \]
-            \end{resultbox}
-        
+                    \begin{resultbox}
+                        \[
+                            \mathbf{\text{L'ensemble des points \( M \) du plan est la perpendiulaire à (AB) passant par C.} }
+                        \]
+                    \end{resultbox}
+
           \end{enumerate}
 
     \item Soit l'ensemble \( \mathcal{E} = \{ M \in \mathbb{P} \ / \ MA^2 + MB^2 = 6 \} \)
@@ -202,28 +203,41 @@ Dans le plan, on considère le triangle \( ABC \) tel que \( AB = 2 \), \( AC = 
                         \]
                     \end{resultbox}
 
-                    \definecolor{wewdxt}{rgb}{0.43137254901960786,0.42745098039215684,0.45098039215686275}
-                    \definecolor{zzttqq}{rgb}{0.6,0.2,0}
-                    \definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1}
-                    \definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1}
-                    \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
-                        \clip(-7.5806713030775255,5.111029105064376) rectangle (5.023498620895737,12.441522187479684);
-                        \fill[line width=2pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (-4.559315779104064,9.226795625986128) -- (-2.5593157791040637,9.226795625986128) -- (-0.5593157791040646,5.226795625986126) -- cycle;
-                        \draw [line width=2pt] (-4.559315779104064,9.226795625986128)-- (-2.5593157791040637,9.226795625986128);
-                        \draw [line width=2pt,color=zzttqq] (-4.559315779104064,9.226795625986128)-- (-2.5593157791040637,9.226795625986128);
-                        \draw [line width=2pt,color=zzttqq] (-2.5593157791040637,9.226795625986128)-- (-0.5593157791040646,5.226795625986126);
-                        \draw [line width=2pt,color=zzttqq] (-0.5593157791040646,5.226795625986126)-- (-4.559315779104064,9.226795625986128);
-                        \draw [line width=2pt] (-3.5593157791040637,9.226795625986128) circle (1.4142135623730951cm);
-                        \begin{scriptsize}
-                            \draw [fill=ududff] (-4.559315779104064,9.226795625986128) circle (2.5pt);
-                            \draw[color=ududff] (-4.495446941791641,9.40154778349264) node {$A$};
-                            \draw [fill=xdxdff] (-2.5593157791040637,9.226795625986128) circle (2.5pt);
-                            \draw[color=xdxdff] (-2.496221555678389,9.40154778349264) node {$B$};
-                            \draw [fill=wewdxt] (-0.5593157791040653,5.226795625986125) circle (2pt);
-                            \draw[color=wewdxt] (-0.4969961695651367,5.3866424813392495) node {$C$};
-                            \draw [fill=black] (-3.5593157791040637,9.226795625986128) circle (2pt);
-                        \end{scriptsize}
-                    \end{tikzpicture}
+                    \begin{center}
+                        \begin{tikzpicture}
+                            % Points de base
+                            \coordinate (A) at (0,0);
+                            \coordinate (B) at (2,0);
+
+                            % Calcul exact des coordonnées de C
+                            \coordinate (C) at ($(A)!{8/sqrt(10)}!(B) + (0,{4*sqrt(2)})$);
+
+                            % Milieu de [AB]
+                            \coordinate (I) at ($(A)!0.5!(B)$);
+
+                            % Coordonnées du point G
+                            \coordinate (G) at (6,0);
+
+                            % Segments du triangle
+                            \draw (A) -- (B) -- (C) -- cycle;
+
+                            % Cercle de centre I et de rayon sqrt(2) (trait plein)
+                            \draw (I) circle ({sqrt(2)});
+
+                            % Points avec labels
+                            \fill (A) circle (2pt) node[below left]{$A$};
+                            \fill (B) circle (2pt) node[below right]{$B$};
+                            \fill (C) circle (2pt) node[above]{$C$};
+                            \fill (I) circle (2pt) node[below]{$I$}; % Milieu de [AB]
+                            \fill (G) circle (2pt) node[below]{$G$}; % Point G
+
+                            % Vecteurs
+                            \draw[->, thick] (B) -- (G) node[midway, above]{$\overrightarrow{AG} = 3 \overrightarrow{AB}$};
+
+                        \end{tikzpicture}
+                    \end{center}
+
+
           \end{enumerate}
 
     \item Soit \( G \) le barycentre des points pondérés \( (A ; 2) \) ; \( (B ; -3) \) et \( \mathcal{F} = \{ M \in \mathbb{P} \ / \ 2MA^2 - 3MB^2 = 15 \} \)
@@ -263,9 +277,9 @@ Dans le plan, on considère le triangle \( ABC \) tel que \( AB = 2 \), \( AC = 
                     \begin{resultbox}
                         \[
                             \mathbf{ \begin{cases}
-                                GA = 6 \\
-                                GB = 4
-                            \end{cases}}
+                                    GA = 6 \\
+                                    GB = 4
+                                \end{cases}}
                         \]
                     \end{resultbox}
 
@@ -273,31 +287,31 @@ Dans le plan, on considère le triangle \( ABC \) tel que \( AB = 2 \), \( AC = 
 
                     \(
                     \begin{aligned}
-                        2MA^2 - 3MB^2 & = 2(\overrightarrow{MG}+\overrightarrow{GA})^2 - 3(\overrightarrow{MG}+\overrightarrow{GB})^2 \\
-                                      & =2(MG^{2}+GA^{2}+2\overrightarrow{MG}.\overrightarrow{GA}) - 3(MG^{2}+GB^{2}+2\overrightarrow{MG}.\overrightarrow{GB})\\
-                                      & =2MG^{2}+2GA^{2}+4\overrightarrow{MG}.\overrightarrow{GA} - 3MG^{2}-3GB^{2}-6\overrightarrow{MG}.\overrightarrow{GB}\\
-                                      & =-MG^{2}+2GA^{2} -3GB^{2}+4\overrightarrow{MG}.\overrightarrow{GA}-6\overrightarrow{MG}.\overrightarrow{GB}\\
-                                      & =-MG^{2}+2GA^{2} -3GB^{2}+2\overrightarrow{MG}(2\overrightarrow{GA}-3\overrightarrow{GB})\\
-                                      & =-MG^{2}+2GA^{2} -3GB^{2}\\
-                                      & =-MG^{2}+2(6)^{2} -3(4)^{2}\\
-                                      & =-MG^{2}+2\times36 -3\times16\\
-                                      & =-MG^{2}+72 -48\\
-                                      & =-MG^{2}+24 \textbf{ cqfd}\\
+                        2MA^2 - 3MB^2 & = 2(\overrightarrow{MG}+\overrightarrow{GA})^2 - 3(\overrightarrow{MG}+\overrightarrow{GB})^2                          \\
+                                      & =2(MG^{2}+GA^{2}+2\overrightarrow{MG}.\overrightarrow{GA}) - 3(MG^{2}+GB^{2}+2\overrightarrow{MG}.\overrightarrow{GB}) \\
+                                      & =2MG^{2}+2GA^{2}+4\overrightarrow{MG}.\overrightarrow{GA} - 3MG^{2}-3GB^{2}-6\overrightarrow{MG}.\overrightarrow{GB}   \\
+                                      & =-MG^{2}+2GA^{2} -3GB^{2}+4\overrightarrow{MG}.\overrightarrow{GA}-6\overrightarrow{MG}.\overrightarrow{GB}            \\
+                                      & =-MG^{2}+2GA^{2} -3GB^{2}+2\overrightarrow{MG}(2\overrightarrow{GA}-3\overrightarrow{GB})                              \\
+                                      & =-MG^{2}+2GA^{2} -3GB^{2}                                                                                              \\
+                                      & =-MG^{2}+2(6)^{2} -3(4)^{2}                                                                                            \\
+                                      & =-MG^{2}+2\times36 -3\times16                                                                                          \\
+                                      & =-MG^{2}+72 -48                                                                                                        \\
+                                      & =-MG^{2}+24 \textbf{ cqfd}                                                                                             \\
                     \end{aligned}
                     \)
-                    \item Déterminonns l’ensemble \( \mathcal{F} \). \hfill \textbf{(0,5 pt)}
-                    
+              \item Déterminonns l’ensemble \( \mathcal{F} \). \hfill \textbf{(0,5 pt)}
+
                     \( \mathcal{F} = \{ M \in \mathbb{P} \ / \ 2MA^2 - 3MB^2 = 15 \} \) d'après la question précédente, \( 2MA^2 - 3MB^2 = -MG^2 + 24 \)
 
-                    \( 
-                        \begin{aligned}
-                            2MA^2 - 3MB^2 = 15 &\implies -MG^2 + 24 = 15\\
-                                               &\implies -MG^2 + 24 = 15\\
-                                               &\implies -MG^2 = 15 -24\\
-                                               &\implies -MG^2 = -9\\
-                                               &\implies MG^2 = 9\\
-                                               &\implies MG = 3
-                        \end{aligned}
+                    \(
+                    \begin{aligned}
+                        2MA^2 - 3MB^2 = 15 & \implies -MG^2 + 24 = 15 \\
+                                           & \implies -MG^2 + 24 = 15 \\
+                                           & \implies -MG^2 = 15 -24  \\
+                                           & \implies -MG^2 = -9      \\
+                                           & \implies MG^2 = 9        \\
+                                           & \implies MG = 3
+                    \end{aligned}
                     \)
 
                     \begin{resultbox}
@@ -305,6 +319,6 @@ Dans le plan, on considère le triangle \( ABC \) tel que \( AB = 2 \), \( AC = 
                             \mathbf{\mathcal{F} = \{ \mathcal{C} (I,2)\}\text{   Donc l'ensemble des point \(M\) est un cercle de centre \(I\) et de rayon de 2 }}
                         \]
                     \end{resultbox}
-                \end{enumerate}
+          \end{enumerate}
 \end{enumerate}
 \end{document}
