@@ -84,141 +84,227 @@ middle color = tcbcolback!80!black]
 \renewcommand{\arraystretch}{1.5}
 \renewcommand{\arrayrulewidth}{1.2pt}
 \begin{tikzpicture}[overlay,remember picture]
-\node[draw=blue,line width=1.2pt,fill=purple,text=blue,inner sep=3mm,rounded corners,pattern=dots]at ([yshift=-2.5cm]current page.north) {\begingroup\setlength{\fboxsep}{0pt}\colorbox{white}{\begin{tabular}{|*1{>{\centering \arraybackslash}p{0.28\textwidth}} |*2{>{\centering \arraybackslash}p{0.2\textwidth}|} *1{>{\centering \arraybackslash}p{0.19\textwidth}|} }
-\hline
-\multicolumn{3}{|c|}{$\diamond$$\diamond$$\diamond$\ \textbf{Lycée de Dindéfélo}\ $\diamond$$\diamond$$\diamond$ }& \textbf{A.S. : 2024/2025} \\ \hline
-\textbf{Matière: Mathématiques}& \textbf{Niveau : 1}\textbf{$^{er}$S2} &\textbf{Date: 19/03/2025} & \textbf{Durée : 4 heures} \\ \hline
-\multicolumn{4}{|c|}{\parbox[c]{10cm}{\begin{center}
-\textbf{{\Large\sffamily Devoir n$ ^{\circ} $ 1 Du 2$ ^\text{\bf nd} $ Semestre}}
-\end{center}}} \\ \hline
-\end{tabular}}\endgroup};
+    \node[draw=blue,line width=1.2pt,fill=purple,text=blue,inner sep=3mm,rounded corners,pattern=dots]at ([yshift=-2.5cm]current page.north) {\begingroup\setlength{\fboxsep}{0pt}\colorbox{white}{\begin{tabular}{|*1{>{\centering \arraybackslash}p{0.28\textwidth}} |*2{>{\centering \arraybackslash}p{0.2\textwidth}|} *1{>{\centering \arraybackslash}p{0.19\textwidth}|} }
+                \hline
+                \multicolumn{3}{|c|}{$\diamond$$\diamond$$\diamond$\ \textbf{Lycée de Dindéfélo}\ $\diamond$$\diamond$$\diamond$ } & \textbf{A.S. : 2024/2025}                                                                     \\ \hline
+                \textbf{Matière: Mathématiques}                                                                                    & \textbf{Niveau : 1}\textbf{$^{er}$S2} & \textbf{Date: 19/03/2025} & \textbf{Durée : 4 heures} \\ \hline
+                \multicolumn{4}{|c|}{\parbox[c]{10cm}{\begin{center}
+                                                                  \textbf{{\Large\sffamily Devoir n$ ^{\circ} $ 1 Du 2$ ^\text{\bf nd} $ Semestre}}
+                                                              \end{center}}}                                                                                                                               \\ \hline
+            \end{tabular}}\endgroup};
 \end{tikzpicture}
 \vspace{3cm}
 
 \section*{\underline{Exercice 4 :} 6 pts }
-Dans le plan, on considère le triangle \( ABC \) tel que \( AB = 2 \), \( AC = 4\sqrt{2} \) et \( BC = 2\sqrt{5} \) (unité cm).  
+Dans le plan, on considère le triangle \( ABC \) tel que \( AB = 2 \), \( AC = 4\sqrt{2} \) et \( BC = 2\sqrt{5} \) (unité cm).
 \( I \) est le milieu de \( [AB] \).
 
 \begin{enumerate}
-    \item 
-    \begin{enumerate}
-        \item Calculons \( \overrightarrow{AB} \cdot \overrightarrow{AC} \). \hfill \textbf{(01 pt)}
-        
-        \( 
-        \begin{aligned}  
-        \overrightarrow{BC}=\overrightarrow{BA}+\overrightarrow{AC} &\implies \overrightarrow{BC}^{2}=(\overrightarrow{BA}+\overrightarrow{AC})^{2}\\
-        &\implies \overrightarrow{BC}^{2}=\overrightarrow{BA}^{2}+\overrightarrow{AC}^{2}+2\overrightarrow{BA}.\overrightarrow{AC}\\
-        &\implies \overrightarrow{BC}^{2}=\overrightarrow{BA}^{2}+\overrightarrow{AC}^{2}-2\overrightarrow{AB}.\overrightarrow{AC}\\
-        &\implies 2\overrightarrow{AB}.\overrightarrow{AC}=\overrightarrow{BA}^{2}+\overrightarrow{AC}^{2}-\overrightarrow{BC}^{2}\\
-        &\implies \overrightarrow{AB}.\overrightarrow{AC}=\frac{1}{2}\left( \overrightarrow{BA}^{2}+\overrightarrow{AC}^{2}-\overrightarrow{BC}^{2}\right) \\
-        \end{aligned}
-        \)
+    \item
+          \begin{enumerate}
+              \item Calculons \( \overrightarrow{AB} \cdot \overrightarrow{AC} \). \hfill \textbf{(01 pt)}
 
-\begin{resultbox}
-    \[
-    \mathbf{\overrightarrow{AB}.\overrightarrow{AC}=\frac{1}{2}\left( \overrightarrow{BA}^{2}+\overrightarrow{AC}^{2}-\overrightarrow{BC}^{2}\right)}
-    \]
-\end{resultbox}        
-        
-        \( 
-        \begin{aligned}    
-       \overrightarrow{AB}.\overrightarrow{AC}&=\frac{1}{2}\left( 2^{2}+(4\sqrt{2})^{2}-(2\sqrt{5})^{2}\right) \\
-       \overrightarrow{AB}.\overrightarrow{AC}&=\frac{1}{2}\left( 4+32-20\right)\\
-       \overrightarrow{AB}.\overrightarrow{AC}&=\frac{1}{2}\left( 36-20\right)\\
-       \overrightarrow{AB}.\overrightarrow{AC}&=\frac{1}{2}\left( 16\right)\\
-       \overrightarrow{AB}.\overrightarrow{AC}&=8
-        \end{aligned}
-        \)
-        
-\begin{resultbox}
-    \[
-    \mathbf{\overrightarrow{AB}.\overrightarrow{AC}=8}
-    \]
-\end{resultbox} 
+                    \(
+                    \begin{aligned}
+                        \overrightarrow{BC}=\overrightarrow{BA}+\overrightarrow{AC} & \implies \overrightarrow{BC}^{2}=(\overrightarrow{BA}+\overrightarrow{AC})^{2}                                                                    \\
+                                                                                    & \implies \overrightarrow{BC}^{2}=\overrightarrow{BA}^{2}+\overrightarrow{AC}^{2}+2\overrightarrow{BA}.\overrightarrow{AC}                         \\
+                                                                                    & \implies \overrightarrow{BC}^{2}=\overrightarrow{BA}^{2}+\overrightarrow{AC}^{2}-2\overrightarrow{AB}.\overrightarrow{AC}                         \\
+                                                                                    & \implies 2\overrightarrow{AB}.\overrightarrow{AC}=\overrightarrow{BA}^{2}+\overrightarrow{AC}^{2}-\overrightarrow{BC}^{2}                         \\
+                                                                                    & \implies \overrightarrow{AB}.\overrightarrow{AC}=\frac{1}{2}\left( \overrightarrow{BA}^{2}+\overrightarrow{AC}^{2}-\overrightarrow{BC}^{2}\right) \\
+                    \end{aligned}
+                    \)
 
-        \item Déduisons-en \( \cos \widehat{BAC} \). \hfill \textbf{(0,5 pt)}
-        
-        \( 
-\begin{aligned}
-        \overrightarrow{AB}.\overrightarrow{AC}= AB\times AC \times \cos \widehat{BAC} &\implies \cos \widehat{BAC}=\frac{\overrightarrow{AB}.\overrightarrow{AC}}{AB\times AC}\\
-        &\implies \cos \widehat{BAC}=\frac{8}{2\times 4\sqrt{2}}\\
-        &\implies \cos \widehat{BAC}=\frac{1}{\sqrt{2}}\\
-        &\implies \cos \widehat{BAC}=\frac{\sqrt{2}}{2}\\
-\end{aligned}
-        \)
-        
-\begin{resultbox}
-    \[
-    \mathbf{cos \widehat{BAC}=\frac{\sqrt{2}}{2}}
-    \]
-\end{resultbox} 
+                    \begin{resultbox}
+                        \[
+                            \mathbf{\overrightarrow{AB}.\overrightarrow{AC}=\frac{1}{2}\left( \overrightarrow{BA}^{2}+\overrightarrow{AC}^{2}-\overrightarrow{BC}^{2}\right)}
+                        \]
+                    \end{resultbox}
 
-        \item L'ensemble des points \( M \) du plan tels que \( \overrightarrow{BA} \cdot \overrightarrow{MC} = 0 \).
+                    \(
+                    \begin{aligned}
+                        \overrightarrow{AB}.\overrightarrow{AC} & =\frac{1}{2}\left( 2^{2}+(4\sqrt{2})^{2}-(2\sqrt{5})^{2}\right) \\
+                        \overrightarrow{AB}.\overrightarrow{AC} & =\frac{1}{2}\left( 4+32-20\right)                               \\
+                        \overrightarrow{AB}.\overrightarrow{AC} & =\frac{1}{2}\left( 36-20\right)                                 \\
+                        \overrightarrow{AB}.\overrightarrow{AC} & =\frac{1}{2}\left( 16\right)                                    \\
+                        \overrightarrow{AB}.\overrightarrow{AC} & =8
+                    \end{aligned}
+                    \)
+
+                    \begin{resultbox}
+                        \[
+                            \mathbf{\overrightarrow{AB}.\overrightarrow{AC}=8}
+                        \]
+                    \end{resultbox}
+
+              \item Déduisons-en \( \cos \widehat{BAC} \). \hfill \textbf{(0,5 pt)}
+
+                    \(
+                    \begin{aligned}
+                        \overrightarrow{AB}.\overrightarrow{AC}= AB\times AC \times \cos \widehat{BAC} & \implies \cos \widehat{BAC}=\frac{\overrightarrow{AB}.\overrightarrow{AC}}{AB\times AC} \\
+                                                                                                       & \implies \cos \widehat{BAC}=\frac{8}{2\times 4\sqrt{2}}                                 \\
+                                                                                                       & \implies \cos \widehat{BAC}=\frac{1}{\sqrt{2}}                                          \\
+                                                                                                       & \implies \cos \widehat{BAC}=\frac{\sqrt{2}}{2}                                          \\
+                    \end{aligned}
+                    \)
+
+                    \begin{resultbox}
+                        \[
+                            \mathbf{cos \widehat{BAC}=\frac{\sqrt{2}}{2}}
+                        \]
+                    \end{resultbox}
+
+              \item L'ensemble des points \( M \) du plan tels que \( \overrightarrow{BA} \cdot \overrightarrow{MC} = 0 \).
+
+              \begin{resultbox}
+                \[
+                    \mathbf{\text{L'ensemble des points \( M \) du plan est la perpendiulaire à (AB) passant par C.} }
+                \]
+            \end{resultbox}
         
-        L'ensemble des points \( M \) du plan est la perpendiulaire à (AB) passant par C.
-    \end{enumerate}
-    
+          \end{enumerate}
+
     \item Soit l'ensemble \( \mathcal{E} = \{ M \in \mathbb{P} \ / \ MA^2 + MB^2 = 6 \} \)
-    \begin{enumerate}
-        \item Montrons que \( MA^2 + MB^2 = 2MI^2 + 2 \). \hfill \textbf{(01 pt)}
-        
-        \( 
-        \begin{aligned}
-        \overrightarrow{MA}^2 + \overrightarrow{MB}^2 &= (\overrightarrow{MI}+\overrightarrow{IA})^2 + (\overrightarrow{MI}+\overrightarrow{IB})^2\\
-        &= \overrightarrow{MI}^2+\overrightarrow{IA}^2+2\overrightarrow{MI}.\overrightarrow{IA}+ \overrightarrow{MI}^2+\overrightarrow{IB}^2+2\overrightarrow{MI}.\overrightarrow{IB}\\
-        &= 2\overrightarrow{MI}^2+2\overrightarrow{MI}(\overrightarrow{IA}+\overrightarrow{IB})+\overrightarrow{IA}^2+\overrightarrow{IB}^2\\
-        &= 2\overrightarrow{MI}^2+\overrightarrow{IA}^2+\overrightarrow{IB}^2\\
-        &= 2\overrightarrow{MI}^2+\left( \frac{AB}{2}\right)^2+\left( \frac{AB}{2}\right)^{2}\\
-        &= 2\overrightarrow{MI}^2+2\left( \frac{AB}{2}\right)^2\\
-        &= 2\overrightarrow{MI}^2+\frac{AB}{2}^2\\
-        &= 2\overrightarrow{MI}^2+\frac{2}{2}^2\\
-        &= 2\overrightarrow{MI}^2+2 \textbf{ cqfd}\\
-				\end{aligned}                
-         \)
-        \item Déterminons et construions l'ensemble \( \mathcal{E} \). \hfill \textbf{(0,5+0,5 pt)}
-        
-        \(
-        \begin{aligned}
-        MA^2 + MB^2 = 6 &\implies 2\overrightarrow{MI}^2+2 = 6\\
-        								&\implies 2\overrightarrow{MI}^2   = 4\\
-        								&\implies \overrightarrow{MI}^2   = 2\\
-        \end{aligned}
-         \)
-         
-         L'ensemble \( \mathcal{E} \) est un cercle de centre \(I\) et de rayon \( \sqrt{2} \)
-         
-          \[
-					\mathcal{E}=\{ C(I;\sqrt{2}) \}.
-					\]
-        \definecolor{wewdxt}{rgb}{0.43137254901960786,0.42745098039215684,0.45098039215686275}
-\definecolor{zzttqq}{rgb}{0.6,0.2,0}
-\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1}
-\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1}
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
-\clip(-7.5806713030775255,5.111029105064376) rectangle (5.023498620895737,12.441522187479684);
-\fill[line width=2pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (-4.559315779104064,9.226795625986128) -- (-2.5593157791040637,9.226795625986128) -- (-0.5593157791040646,5.226795625986126) -- cycle;
-\draw [line width=2pt] (-4.559315779104064,9.226795625986128)-- (-2.5593157791040637,9.226795625986128);
-\draw [line width=2pt,color=zzttqq] (-4.559315779104064,9.226795625986128)-- (-2.5593157791040637,9.226795625986128);
-\draw [line width=2pt,color=zzttqq] (-2.5593157791040637,9.226795625986128)-- (-0.5593157791040646,5.226795625986126);
-\draw [line width=2pt,color=zzttqq] (-0.5593157791040646,5.226795625986126)-- (-4.559315779104064,9.226795625986128);
-\draw [line width=2pt] (-3.5593157791040637,9.226795625986128) circle (1.4142135623730951cm);
-\begin{scriptsize}
-\draw [fill=ududff] (-4.559315779104064,9.226795625986128) circle (2.5pt);
-\draw[color=ududff] (-4.495446941791641,9.40154778349264) node {$A$};
-\draw [fill=xdxdff] (-2.5593157791040637,9.226795625986128) circle (2.5pt);
-\draw[color=xdxdff] (-2.496221555678389,9.40154778349264) node {$B$};
-\draw [fill=wewdxt] (-0.5593157791040653,5.226795625986125) circle (2pt);
-\draw[color=wewdxt] (-0.4969961695651367,5.3866424813392495) node {$C$};
-\draw [fill=black] (-3.5593157791040637,9.226795625986128) circle (2pt);
-\end{scriptsize}
-\end{tikzpicture}
-    \end{enumerate}
-    
+          \begin{enumerate}
+              \item Montrons que \( MA^2 + MB^2 = 2MI^2 + 2 \). \hfill \textbf{(01 pt)}
+
+                    \(
+                    \begin{aligned}
+                        \overrightarrow{MA}^2 + \overrightarrow{MB}^2 & = (\overrightarrow{MI}+\overrightarrow{IA})^2 + (\overrightarrow{MI}+\overrightarrow{IB})^2                                                                                  \\
+                                                                      & = \overrightarrow{MI}^2+\overrightarrow{IA}^2+2\overrightarrow{MI}.\overrightarrow{IA}+ \overrightarrow{MI}^2+\overrightarrow{IB}^2+2\overrightarrow{MI}.\overrightarrow{IB} \\
+                                                                      & = 2\overrightarrow{MI}^2+2\overrightarrow{MI}(\overrightarrow{IA}+\overrightarrow{IB})+\overrightarrow{IA}^2+\overrightarrow{IB}^2                                           \\
+                                                                      & = 2\overrightarrow{MI}^2+\overrightarrow{IA}^2+\overrightarrow{IB}^2                                                                                                         \\
+                                                                      & = 2\overrightarrow{MI}^2+\left( \frac{AB}{2}\right)^2+\left( \frac{AB}{2}\right)^{2}                                                                                         \\
+                                                                      & = 2\overrightarrow{MI}^2+2\left( \frac{AB}{2}\right)^2                                                                                                                       \\
+                                                                      & = 2\overrightarrow{MI}^2+\frac{AB}{2}^2                                                                                                                                      \\
+                                                                      & = 2\overrightarrow{MI}^2+\frac{2}{2}^2                                                                                                                                       \\
+                                                                      & = 2\overrightarrow{MI}^2+2 \textbf{ cqfd}                                                                                                                                    \\
+                    \end{aligned}
+                    \)
+              \item Déterminons et construions l'ensemble \( \mathcal{E} \). \hfill \textbf{(0,5+0,5 pt)}
+
+                    \(
+                    \begin{aligned}
+                        MA^2 + MB^2 = 6 & \implies 2\overrightarrow{MI}^2+2 = 6 \\
+                                        & \implies 2\overrightarrow{MI}^2   = 4 \\
+                                        & \implies \overrightarrow{MI}^2   = 2  \\
+                    \end{aligned}
+                    \)
+
+                    L'ensemble \( \mathcal{E} \) est un cercle de centre \(I\) et de rayon \( \sqrt{2} \)
+
+                    \[
+                        \mathcal{E}=\{ C(I;\sqrt{2}) \}.
+                    \]
+
+                    \begin{resultbox}
+                        \[
+                            \mathbf{\mathcal{E} = \{C(I;\sqrt{2})\} }
+                        \]
+                    \end{resultbox}
+
+                    \definecolor{wewdxt}{rgb}{0.43137254901960786,0.42745098039215684,0.45098039215686275}
+                    \definecolor{zzttqq}{rgb}{0.6,0.2,0}
+                    \definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1}
+                    \definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1}
+                    \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+                        \clip(-7.5806713030775255,5.111029105064376) rectangle (5.023498620895737,12.441522187479684);
+                        \fill[line width=2pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (-4.559315779104064,9.226795625986128) -- (-2.5593157791040637,9.226795625986128) -- (-0.5593157791040646,5.226795625986126) -- cycle;
+                        \draw [line width=2pt] (-4.559315779104064,9.226795625986128)-- (-2.5593157791040637,9.226795625986128);
+                        \draw [line width=2pt,color=zzttqq] (-4.559315779104064,9.226795625986128)-- (-2.5593157791040637,9.226795625986128);
+                        \draw [line width=2pt,color=zzttqq] (-2.5593157791040637,9.226795625986128)-- (-0.5593157791040646,5.226795625986126);
+                        \draw [line width=2pt,color=zzttqq] (-0.5593157791040646,5.226795625986126)-- (-4.559315779104064,9.226795625986128);
+                        \draw [line width=2pt] (-3.5593157791040637,9.226795625986128) circle (1.4142135623730951cm);
+                        \begin{scriptsize}
+                            \draw [fill=ududff] (-4.559315779104064,9.226795625986128) circle (2.5pt);
+                            \draw[color=ududff] (-4.495446941791641,9.40154778349264) node {$A$};
+                            \draw [fill=xdxdff] (-2.5593157791040637,9.226795625986128) circle (2.5pt);
+                            \draw[color=xdxdff] (-2.496221555678389,9.40154778349264) node {$B$};
+                            \draw [fill=wewdxt] (-0.5593157791040653,5.226795625986125) circle (2pt);
+                            \draw[color=wewdxt] (-0.4969961695651367,5.3866424813392495) node {$C$};
+                            \draw [fill=black] (-3.5593157791040637,9.226795625986128) circle (2pt);
+                        \end{scriptsize}
+                    \end{tikzpicture}
+          \end{enumerate}
+
     \item Soit \( G \) le barycentre des points pondérés \( (A ; 2) \) ; \( (B ; -3) \) et \( \mathcal{F} = \{ M \in \mathbb{P} \ / \ 2MA^2 - 3MB^2 = 15 \} \)
-    \begin{enumerate}
-        \item Construisons \( G \) et calculer \( GA \) et \( GB \). \hfill \textbf{(0,5+0,5 pt)}
-        %\item Montrer que \( 2MA^2 - 3MB^2 = -MG^2 + 24 \). \hfill \textbf{(01 pt)}
-        %\item Déterminer l’ensemble \( \mathcal{F} \). \hfill \textbf{(0,5 pt)}
-    \end{enumerate}
+          \begin{enumerate}
+              \item Construisons \( G \) et calculer \( GA \) et \( GB \). \hfill \textbf{(0,5+0,5 pt)}
+
+                    \( G \) le barycentre de \( (A ; 2) \) ; \( (B ; -3) \)
+
+                    \(
+                    \begin{aligned}
+                        G =bar\{ (A ; 2) ; (B ; -3) \} & \implies \overrightarrow{AG} = 3 \overrightarrow{AB}  \\
+                                                       & \implies \overrightarrow{BG} = -2 \overrightarrow{BA}
+                    \end{aligned}
+                    \)
+
+                    \(
+                    \begin{aligned}
+                        \begin{cases}
+                            \overrightarrow{AG} = 3 \overrightarrow{AB} \\
+                            \overrightarrow{BG} = -2 \overrightarrow{BA}
+                        \end{cases} & \iff
+                        \begin{cases}
+                            \| \overrightarrow{AG} \| =\| 3 \overrightarrow{AB}\| \\
+                            \| \overrightarrow{BG} \|=\| -2 \overrightarrow{BA}\|
+                        \end{cases} \\&\iff
+                        \begin{cases}
+                            AG = 3 AB \\
+                            BG = 2 BA
+                        \end{cases}                                          \\&\iff
+                        \begin{cases}
+                            GA = 6 \\
+                            GB = 4
+                        \end{cases}
+                    \end{aligned}
+                    \)
+
+                    \begin{resultbox}
+                        \[
+                            \mathbf{ \begin{cases}
+                                GA = 6 \\
+                                GB = 4
+                            \end{cases}}
+                        \]
+                    \end{resultbox}
+
+              \item Montrons que \( 2MA^2 - 3MB^2 = -MG^2 + 24 \). \hfill \textbf{(01 pt)}
+
+                    \(
+                    \begin{aligned}
+                        2MA^2 - 3MB^2 & = 2(\overrightarrow{MG}+\overrightarrow{GA})^2 - 3(\overrightarrow{MG}+\overrightarrow{GB})^2 \\
+                                      & =2(MG^{2}+GA^{2}+2\overrightarrow{MG}.\overrightarrow{GA}) - 3(MG^{2}+GB^{2}+2\overrightarrow{MG}.\overrightarrow{GB})\\
+                                      & =2MG^{2}+2GA^{2}+4\overrightarrow{MG}.\overrightarrow{GA} - 3MG^{2}-3GB^{2}-6\overrightarrow{MG}.\overrightarrow{GB}\\
+                                      & =-MG^{2}+2GA^{2} -3GB^{2}+4\overrightarrow{MG}.\overrightarrow{GA}-6\overrightarrow{MG}.\overrightarrow{GB}\\
+                                      & =-MG^{2}+2GA^{2} -3GB^{2}+2\overrightarrow{MG}(2\overrightarrow{GA}-3\overrightarrow{GB})\\
+                                      & =-MG^{2}+2GA^{2} -3GB^{2}\\
+                                      & =-MG^{2}+2(6)^{2} -3(4)^{2}\\
+                                      & =-MG^{2}+2\times36 -3\times16\\
+                                      & =-MG^{2}+72 -48\\
+                                      & =-MG^{2}+24 \textbf{ cqfd}\\
+                    \end{aligned}
+                    \)
+                    \item Déterminonns l’ensemble \( \mathcal{F} \). \hfill \textbf{(0,5 pt)}
+                    
+                    \( \mathcal{F} = \{ M \in \mathbb{P} \ / \ 2MA^2 - 3MB^2 = 15 \} \) d'après la question précédente, \( 2MA^2 - 3MB^2 = -MG^2 + 24 \)
+
+                    \( 
+                        \begin{aligned}
+                            2MA^2 - 3MB^2 = 15 &\implies -MG^2 + 24 = 15\\
+                                               &\implies -MG^2 + 24 = 15\\
+                                               &\implies -MG^2 = 15 -24\\
+                                               &\implies -MG^2 = -9\\
+                                               &\implies MG^2 = 9\\
+                                               &\implies MG = 3
+                        \end{aligned}
+                    \)
+
+                    \begin{resultbox}
+                        \[
+                            \mathbf{\mathcal{F} = \{ \mathcal{C} (I,2)\}\text{   Donc l'ensemble des point \(M\) est un cercle de centre \(I\) et de rayon de 2 }}
+                        \]
+                    \end{resultbox}
+                \end{enumerate}
 \end{enumerate}
 \end{document}
