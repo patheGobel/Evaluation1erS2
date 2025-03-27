@@ -79,8 +79,7 @@ middle color = tcbcolback!80!black]
 \color{blue}\ding{45}\ \textbf{Prof:M. BA}
 }
 \cfoot{\bf
-\thepage /
-\pageref{LastPage}}
+\thepage/\pageref{LastPage}}
 \begin{document}
 \renewcommand{\arraystretch}{1.5}
 \renewcommand{\arrayrulewidth}{1.2pt}
@@ -96,6 +95,76 @@ middle color = tcbcolback!80!black]
 \end{tikzpicture}
 \vspace{3cm}
 
+\section*{\underline{Exercice 3:} 5pts }
+
+\begin{enumerate}
+\item Soient les fonctions \( f \) et \( g \) telles que :
+
+$
+    \begin{aligned}
+        f : \mathbb{R} & \to \mathbb{R} \\
+        x              & \mapsto x^2
+    \end{aligned}\quad\quad\quad
+    \begin{aligned}
+        g : \mathbb{R} & \to \mathbb{R}        \\
+        x              & \mapsto 2x^2 - 5x - 3
+    \end{aligned}
+$
+\begin{enumerate}
+    \item Montrons que \( f \) et \( g \) sont des applications. \hfill \textbf{(0,5 pt)}
+
+          \( Df=\mathbb{R} \) donc \(f\) est une application
+
+          \( Dg=\mathbb{R} \) donc \(g\) est une application
+    \item Les fonctions \( f \) et \( g \) sont-elles injectives ? Surjectives ? \hfill
+          \textbf{(2 $\times$ 0,5 pt)}
+
+          \underline{\textbf{Pour \( f \)}}:
+
+    \item Vérifions si \( f \) injective
+
+          Soit \(x_1\) et \(x_2\) \(\in \mathbb{R}\) a-t-on \(f(x_1)=f(x_2)\implies
+          x_1=x_2\)?
+
+          \(\begin{aligned}
+              f(x_1)=f(x_2) & \implies x_1^{2}=x_2^{2}              \\
+                            & \implies x_1=x_2 \text{ ou } x_1=-x_2
+          \end{aligned}\)
+          Donc \(f\) n'est pas injective
+
+          Vérifions si \( f \) surjective
+
+          Soit \(y \in \mathbb{R}\) a-t-on \(\forall x \in \mathbb{R},f(x)=y \)?
+
+          \(
+          \begin{aligned}
+              f(x)=y & \implies x^{2}=y \\
+                     & \implies x^{2}=y
+          \end{aligned}
+          \)
+
+          Cette équation n'a pas toujours une solution. Car si \( y<0 \) alors pas de
+          solution.
+
+          Donc \( f \) n'est pas surjective non plus.
+\end{enumerate}
+
+%   \item Soit l’application 
+
+%$    
+%\begin{aligned}
+%        h : ]3 ; +\infty[ &\to ]0 ; +\infty[ \\
+%        x &\mapsto 2x^2 - 5x - 3
+%\end{aligned}
+%$
+
+%   Démontrer que \( h \) est une bijection. Déterminer sa bijection réciproque \( h^{-1} \). \hfill \textbf{(1 pt)}
+
+%   \item On considère les intervalles \( I = [4 ; 5] \) et \( J = [0 ; 4] \).
+\end{enumerate}
+
+%Déterminer l’image directe de $I$ par $h$ et l’image réciproque de $J$ par $h$.\hfill \textbf{(2x0,5 pt)}
+
 \section*{\underline{Exercice 4 :} 6 pts }
 Dans le plan, on considère le triangle \( ABC \) tel que \( AB = 2 \), \( AC = 4\sqrt{2} \) et \( BC = 2\sqrt{5} \) (unité cm).
 \( I \) est le milieu de \( [AB] \).
@@ -103,7 +172,8 @@ Dans le plan, on considère le triangle \( ABC \) tel que \( AB = 2 \), \( AC = 
 \begin{enumerate}
     \item
           \begin{enumerate}
-              \item Calculons \( \overrightarrow{AB} \cdot \overrightarrow{AC} \). \hfill \textbf{(01 pt)}
+              \item Calculons \( \overrightarrow{AB} \cdot \overrightarrow{AC} \). \hfill
+                    \textbf{(01 pt)}
 
                     \(
                     \begin{aligned}
@@ -137,7 +207,7 @@ Dans le plan, on considère le triangle \( ABC \) tel que \( AB = 2 \), \( AC = 
                         \]
                     \end{resultbox}
 
-              \item Déduisons-en \( \cos \widehat{BAC} \). \hfill \textbf{(0,5 pt)}
+              \item Déduisons-en \( \cos \widehat{BAC} \).\hfill \textbf{(0,5 pt)}
 
                     \(
                     \begin{aligned}
@@ -150,11 +220,12 @@ Dans le plan, on considère le triangle \( ABC \) tel que \( AB = 2 \), \( AC = 
 
                     \begin{resultbox}
                         \[
-                            \mathbf{cos \widehat{BAC}=\frac{\sqrt{2}}{2}}
+                            \mathbf{\cos \widehat{BAC}=\frac{\sqrt{2}}{2}}
                         \]
                     \end{resultbox}
 
-              \item L'ensemble des points \( M \) du plan tels que \( \overrightarrow{BA} \cdot \overrightarrow{MC} = 0 \).
+              \item L'ensemble des points \( M \) du plan tels que \( \overrightarrow{BA} \cdot
+                    \overrightarrow{MC} = 0 \).
 
                     \begin{resultbox}
                         \[
@@ -164,9 +235,10 @@ Dans le plan, on considère le triangle \( ABC \) tel que \( AB = 2 \), \( AC = 
 
           \end{enumerate}
 
-    \item Soit l'ensemble \( \mathcal{E} = \{ M \in \mathbb{P} \ / \ MA^2 + MB^2 = 6 \} \)
+    \item Soit l'ensemble \( \mathcal{E} = \{ M \in \mathbb{P} \ / \ MA^2 + MB^2 = 6 \}
+          \)
           \begin{enumerate}
-              \item Montrons que \( MA^2 + MB^2 = 2MI^2 + 2 \). \hfill \textbf{(01 pt)}
+              \item Montrons que \( MA^2 + MB^2 = 2MI^2 + 2 \).\hfill \textbf{(01 pt)}
 
                     \(
                     \begin{aligned}
@@ -181,7 +253,8 @@ Dans le plan, on considère le triangle \( ABC \) tel que \( AB = 2 \), \( AC = 
                                                                       & = 2\overrightarrow{MI}^2+2 \textbf{ cqfd}                                                                                                                                    \\
                     \end{aligned}
                     \)
-              \item Déterminons et construions l'ensemble \( \mathcal{E} \). \hfill \textbf{(0,5+0,5 pt)}
+              \item Déterminons et construions l'ensemble \( \mathcal{E} \). \hfill
+                    \textbf{(0,5+0,5 pt)}
 
                     \(
                     \begin{aligned}
@@ -191,7 +264,8 @@ Dans le plan, on considère le triangle \( ABC \) tel que \( AB = 2 \), \( AC = 
                     \end{aligned}
                     \)
 
-                    L'ensemble \( \mathcal{E} \) est un cercle de centre \(I\) et de rayon \( \sqrt{2} \)
+                    L'ensemble \( \mathcal{E} \) est un cercle de centre \(I\) et de rayon \(
+                    \sqrt{2} \)
 
                     \[
                         \mathcal{E}=\{ C(I;\sqrt{2}) \}.
@@ -237,12 +311,13 @@ Dans le plan, on considère le triangle \( ABC \) tel que \( AB = 2 \), \( AC = 
                         \end{tikzpicture}
                     \end{center}
 
-
           \end{enumerate}
 
-    \item Soit \( G \) le barycentre des points pondérés \( (A ; 2) \) ; \( (B ; -3) \) et \( \mathcal{F} = \{ M \in \mathbb{P} \ / \ 2MA^2 - 3MB^2 = 15 \} \)
+    \item Soit \( G \) le barycentre des points pondérés \( (A ; 2) \) ; \( (B ; -3) \)
+          et \( \mathcal{F} = \{ M \in \mathbb{P} \ / \ 2MA^2 - 3MB^2 = 15 \} \)
           \begin{enumerate}
-              \item Construisons \( G \) et calculer \( GA \) et \( GB \). \hfill \textbf{(0,5+0,5 pt)}
+              \item Construisons \( G \) et calculer \( GA \) et \( GB \). \hfill \textbf{(0,5+0,5
+                        pt)}
 
                     \( G \) le barycentre de \( (A ; 2) \) ; \( (B ; -3) \)
 
@@ -262,12 +337,12 @@ Dans le plan, on considère le triangle \( ABC \) tel que \( AB = 2 \), \( AC = 
                         \begin{cases}
                             \| \overrightarrow{AG} \| =\| 3 \overrightarrow{AB}\| \\
                             \| \overrightarrow{BG} \|=\| -2 \overrightarrow{BA}\|
-                        \end{cases} \\&\iff
+                        \end{cases} \\     & \iff
                         \begin{cases}
                             AG = 3 AB \\
                             BG = 2 BA
-                        \end{cases}                                          \\&\iff
-                        \begin{cases}
+                        \end{cases}                                          \\     & \iff
+                              \begin{cases}
                             GA = 6 \\
                             GB = 4
                         \end{cases}
@@ -283,7 +358,7 @@ Dans le plan, on considère le triangle \( ABC \) tel que \( AB = 2 \), \( AC = 
                         \]
                     \end{resultbox}
 
-              \item Montrons que \( 2MA^2 - 3MB^2 = -MG^2 + 24 \). \hfill \textbf{(01 pt)}
+              \item Montrons que \( 2MA^2 - 3MB^2 = -MG^2 + 24 \).\hfill \textbf{(01 pt)}
 
                     \(
                     \begin{aligned}
@@ -299,7 +374,7 @@ Dans le plan, on considère le triangle \( ABC \) tel que \( AB = 2 \), \( AC = 
                                       & =-MG^{2}+24 \textbf{ cqfd}                                                                                             \\
                     \end{aligned}
                     \)
-              \item Déterminonns l’ensemble \( \mathcal{F} \). \hfill \textbf{(0,5 pt)}
+              \item Déterminonns l’ensemble \( \mathcal{F} \).\hfill \textbf{(0,5 pt)}
 
                     \( \mathcal{F} = \{ M \in \mathbb{P} \ / \ 2MA^2 - 3MB^2 = 15 \} \) d'après la question précédente, \( 2MA^2 - 3MB^2 = -MG^2 + 24 \)
 
