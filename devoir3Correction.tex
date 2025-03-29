@@ -121,7 +121,7 @@ $
 
           \underline{\textbf{Pour \( f \)}}:
 
-    \item Vérifions si \( f \) injective
+            Vérifions si \( f \) injective
 
           Soit \(x_1\) et \(x_2\) \(\in \mathbb{R}\) a-t-on \(f(x_1)=f(x_2)\implies
           x_1=x_2\)?
@@ -130,7 +130,12 @@ $
               f(x_1)=f(x_2) & \implies x_1^{2}=x_2^{2}              \\
                             & \implies x_1=x_2 \text{ ou } x_1=-x_2
           \end{aligned}\)
-          Donc \(f\) n'est pas injective
+
+          \begin{resultbox}
+            \[
+                \mathbf{\text{Donc \(f\) n'est pas injective}}
+            \]
+        \end{resultbox}
 
           Vérifions si \( f \) surjective
 
@@ -146,8 +151,65 @@ $
           Cette équation n'a pas toujours une solution. Car si \( y<0 \) alors pas de
           solution.
 
-          Donc \( f \) n'est pas surjective non plus.
-\end{enumerate}
+          \begin{resultbox}
+            \[
+                \mathbf{\text{Donc \( f \) n'est pas surjective non plus.}}
+            \]
+        \end{resultbox}
+          
+          \underline{\textbf{Pour \( g \)}}:
+          
+          Vérifions si \( g \) injective
+
+          Soit \(x_1\) et \(x_2\) \(\in \mathbb{R}\) a-t-on \(g(x_1)=g(x_2)\implies
+          x_1=x_2\)?
+
+          \(\begin{aligned}
+              g(x_1)=g(x_2) & \implies 2x_1^{2}-5x_1-3=2x_2^{2}-5x_2-3\\
+                            & \implies 2x_1^{2}-5x_1=2x_2^{2}-5x_2\\
+                            & \implies 2x_1^{2}-2x_2^{2}-5x_1+5x_2 = 0\\
+                            & \implies 2[x_1^{2}-x_2^{2}]-5(x_1-x_2) = 0\\
+                            & \implies 2[(x_1-x_2)(x_1+x_2)]-5(x_1-x_2) = 0\\
+                            & \implies (x_1-x_2)[2(x_1+x_2)-5] = 0\\
+                            & \implies (x_1-x_2)=0 \text{ ou } [2(x_1+x_2)-5] = 0\\
+                            & \implies x_1=x_2\text{ ou } 2x_1 = -2x_2+5\\
+          \end{aligned}\)
+
+          \begin{resultbox}
+            \[
+                \mathbf{\text{Donc \(g\) n'est pas injective}}
+            \]
+        \end{resultbox}
+
+        Vérifions si \( g \) surjective
+
+          Soit \(y \in \mathbb{R}\) a-t-on \(\forall x \in \mathbb{R},g(x)=y \)?
+
+          \(
+          \begin{aligned}
+              g(x)=y & \implies 2x^{2}-5x-3=y \\
+                     & \implies 2x^{2}-5x-3-y=0\\
+          \end{aligned}
+          \)
+
+            \(
+            \begin{aligned}
+                \Delta &= 5^{2}-4(2)(-3-y)\\
+                       &= 25-8(-3-y)\\
+                       &= 25+24+8y\\
+                       &= 49+8y\\
+            \end{aligned} 
+            \)
+
+            Si $y\in \left]-\infty;\frac{-49}{8}\right[$ alors il n'existe pas de $x\in\mathbb{R}$ tel que $g(x)=y$
+
+          \begin{resultbox}
+            \[
+                \mathbf{\text{Donc \( g \) n'est pas surjective non plus.}}
+            \]
+        \end{resultbox}
+
+        \end{enumerate}
 
 %   \item Soit l’application 
 
