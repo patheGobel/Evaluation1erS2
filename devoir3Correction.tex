@@ -211,18 +211,46 @@ $
 
         \end{enumerate}
 
-%   \item Soit l’application 
+   \item Soit l’application 
 
-%$    
-%\begin{aligned}
-%        h : ]3 ; +\infty[ &\to ]0 ; +\infty[ \\
-%        x &\mapsto 2x^2 - 5x - 3
-%\end{aligned}
-%$
+$    
+\begin{aligned}
+        h : ]3 ; +\infty[ &\to ]0 ; +\infty[ \\
+        x &\mapsto 2x^2 - 5x - 3
+\end{aligned}
+$
 
-%   Démontrer que \( h \) est une bijection. Déterminer sa bijection réciproque \( h^{-1} \). \hfill \textbf{(1 pt)}
+   Démontrons que \( h \) est une bijection.
 
-%   \item On considère les intervalles \( I = [4 ; 5] \) et \( J = [0 ; 4] \).
+   Soit \(y \in \mathbb{R}\) montrons \(\forall x \in \mathbb{R},g(x)=y \)
+
+          \(
+          \begin{aligned}
+              g(x)=y & \implies 2x^{2}-5x-3=y \\
+                     & \implies 2x^{2}-5x-3-y=0\\
+          \end{aligned}
+          \)
+
+            \(
+            \begin{aligned}
+                \Delta &= 5^{2}-4(2)(-3-y)\\
+                       &= 25-8(-3-y)\\
+                       &= 25+24+8y\\
+                       &= 49+8y\\
+            \end{aligned} 
+            \)
+
+            Comme $y>0$ donc $ \Delta > 0 $ donc $\forall x \in ]3;+\infty[$, $\exists y\in ]0;+\infty[$ tel que $ g(x)=y $ 
+
+          \begin{resultbox}
+            \[
+                \mathbf{\text{Donc \( g \) est surjective non plus.}}
+            \]
+        \end{resultbox}
+   
+   %Déterminons sa bijection réciproque \( h^{-1} \). \hfill \textbf{(1 pt)}
+
+   %\item On considère les intervalles \( I = [4 ; 5] \) et \( J = [0 ; 4] \).
 \end{enumerate}
 
 %Déterminer l’image directe de $I$ par $h$ et l’image réciproque de $J$ par $h$.\hfill \textbf{(2x0,5 pt)}
