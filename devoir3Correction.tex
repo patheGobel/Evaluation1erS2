@@ -240,20 +240,64 @@ $
             \end{aligned} 
             \)
 
-            Comme $y>0$ donc $ \Delta > 0 $ donc $\forall x \in ]3;+\infty[$, $\exists y\in ]0;+\infty[$ tel que $ g(x)=y $ 
+            Comme $y>0$ donc $ \Delta > 0 $ donc $\forall x \in ]3;+\infty[$, $\exists y\in ]0;+\infty[$ tel que $ h(x)=y $ 
 
           \begin{resultbox}
             \[
-                \mathbf{\text{Donc \( g \) est surjective non plus.}}
+                \mathbf{\text{Donc \( h \) est surjective.}}
             \]
         \end{resultbox}
    
-   %Déterminons sa bijection réciproque \( h^{-1} \). \hfill \textbf{(1 pt)}
+   Déterminons sa bijection réciproque \( h^{-1} \). \hfill \textbf{(1 pt)}
 
-   %\item On considère les intervalles \( I = [4 ; 5] \) et \( J = [0 ; 4] \).
+   Comme \( \Delta = 49+8y \) donc \( x_{1} = \frac{5-\sqrt{49+8y}}{4} \) et \( x_{2} = \frac{5+\sqrt{49+8y}}{4} \) 
+
+   Or \(\forall y \in ]0;+\infty[ \), \( 49+8y > 5 \) donc \( x_{1}<0 \) et \( x_{2}>0 \)
+
+   Donc \( h^{-1}(x) = \frac{5+\sqrt{49+8x}}{4} \)
+
+   \begin{resultbox}
+    \[
+        \mathbf{ h^{-1}(x) = \frac{5+\sqrt{49+8x}}{4} }
+    \]
+    \end{resultbox}
+
+   \item On considère les intervalles \( I = [4 ; 5] \) et \( J = [0 ; 4] \).
 \end{enumerate}
 
-%Déterminer l’image directe de $I$ par $h$ et l’image réciproque de $J$ par $h$.\hfill \textbf{(2x0,5 pt)}
+Déterminons l’image directe de $I$ par $h$ et l’image réciproque de $J$ par $h$.\hfill \textbf{(2x0,5 pt)}
+
+\textbf{Calculons h(I)}
+
+\( 
+\begin{aligned}
+    \forall x \in Dh \cap [4 ; 5] &\implies x \in [4 ; 5] \\
+                                &\implies 4 < x < 5 \\
+                                &\implies 16 < 2x^{2} < 25 \\
+                                &\implies 32 < 2x^{2} < 50 \\
+\end{aligned} 
+\) 
+
+\( 
+\begin{aligned}
+    \forall x \in Dh \cap [4 ; 5] &\implies x \in [4 ; 5] \\
+                                &\implies 4 \leq x \leq 5 \\
+                                &\implies -20 \leq -5x \leq -25 \\
+                                &\implies -23 \leq -5x -3 \leq -28 \\
+\end{aligned} 
+\) 
+
+
+\underline{\( 
+\begin{cases}
+    32 \leq 2x^{2} \leq 50 \\
+    -23 \leq -5x -3 \leq -28 
+\end{cases}
+\)}
+
+\( 9 \leq 2x^{2}-5x -3 \leq 22  \)
+
+Finalement \( h([4 ; 5] = [ 9 ; 22] )
 
 \section*{\underline{Exercice 4 :} 6 pts }
 Dans le plan, on considère le triangle \( ABC \) tel que \( AB = 2 \), \( AC = 4\sqrt{2} \) et \( BC = 2\sqrt{5} \) (unité cm).
