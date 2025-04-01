@@ -255,6 +255,8 @@ $
    Or \(\forall y \in ]0;+\infty[ \), \( 49+8y > 5 \) donc \( x_{1}<0 \) et \( x_{2}>0 \)
 
    Donc \( h^{-1}(x) = \frac{5+\sqrt{49+8x}}{4} \)
+   
+   \( Dh^{-1}=\left[\frac{-49}{8};+\infty\right[\)
 
    \begin{resultbox}
     \[
@@ -272,9 +274,9 @@ Déterminons l’image directe de $I$ par $h$ et l’image réciproque de $J$ pa
 \( 
 \begin{aligned}
     \forall x \in Dh \cap [4 ; 5] &\implies x \in [4 ; 5] \\
-                                &\implies 4 < x < 5 \\
-                                &\implies 16 < 2x^{2} < 25 \\
-                                &\implies 32 < 2x^{2} < 50 \\
+                                &\implies 4 \leq x \leq 5 \\
+                                &\implies 16 \leq 2x^{2} \leq 25 \\
+                                &\implies 32 \leq 2x^{2} \leq 50 \\
 \end{aligned} 
 \) 
 
@@ -297,7 +299,39 @@ Déterminons l’image directe de $I$ par $h$ et l’image réciproque de $J$ pa
 
 \( 9 \leq 2x^{2}-5x -3 \leq 22  \)
 
-Finalement \( h([4 ; 5] = [ 9 ; 22] )
+Donc \( \forall x\in [4;5], 9 \leq x \leq 22  \implies h([4;5]) = [ 9 ; 22] \)
+
+Finalement \( h([4 ; 5]) = [ 9 ; 22] \)
+
+\textbf{Calculons }\( h^{-1}(J) \)
+
+$    
+\begin{aligned}
+        h^{-1} : ]0 ; +\infty[ &\to ]3 ; +\infty[ \\
+        x &\mapsto \frac{5+\sqrt{49+8x}}{4}
+\end{aligned}
+$
+
+ \( Dh^{-1}=\left[\frac{-49}{8};+\infty\right[\)
+
+\( 
+\begin{aligned}
+    \forall x \in Dh^{-1} \cap [0 ; 4] &\implies x \in [0; 4] \\
+                                &\implies 0 \leq h^{-1}(x) \leq 4 \\
+                                &\implies 0 \leq \frac{5+\sqrt{49+8x}}{4} \leq 4 \\
+                                &\implies 0 \leq 5+\sqrt{49+8x} \leq 16 \\
+                                &\implies -5 \leq \sqrt{49+8x} \leq 11 \\
+                                &\implies 25 \leq 49+8x \leq 121 \\
+                                &\implies 25-49 \leq 8x \leq 121-49 \\
+                                &\implies -24 \leq 8x \leq 72 \\
+                                &\implies -3 \leq x \leq 9 \\
+                                &\implies h^{-1}(x)\in[-3 ; 9] \\
+\end{aligned} 
+\) 
+
+Donc \( \forall x\in [0;4], -3 \leq x \leq 9  \implies h^{-1}([0;4]) = [ -3 ; 9] \)
+
+Finalement \( h^{-1}([0;4]) = [ -3 ; 9] \)
 
 \section*{\underline{Exercice 4 :} 6 pts }
 Dans le plan, on considère le triangle \( ABC \) tel que \( AB = 2 \), \( AC = 4\sqrt{2} \) et \( BC = 2\sqrt{5} \) (unité cm).
