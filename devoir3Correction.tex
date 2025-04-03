@@ -192,19 +192,117 @@ Posons$\left\{
                 \mathbf{Df = \mathbb{R}\quad\quad\quad \textbf{1pt}}
             \]
         \end{resultbox} 
-    %\item $\left\{
-        %\begin{array}{ll}
-            %f(x) = \dfrac{x(x-2)}{x-1}, & \text{si } x < 0 \\
-            %f(x) = x + \sqrt{x^2 - 4}, & \text{si } x \geq 0
-        %\end{array}
-    %\right.$
+    \item $\left\{
+        \begin{array}{ll}
+            f(x) = \dfrac{x(x-2)}{x-1}, & \text{si } x < 0 \\
+            f(x) = x + \sqrt{x^2 - 4}, & \text{si } x \geq 0
+        \end{array}
+    \right.$
+
+Posons$\left\{
+        \begin{array}{ll}
+            f_{1}(x) = \dfrac{x(x-2)}{x-1}, & \text{si } x < 0 \\
+            f_{2}(x) = x + \sqrt{x^2 - 4}, & \text{si } x \geq 0
+        \end{array}
+    \right.$    
+
+\( f_{1}\quad \exists \text{ ssi } \quad  x-1 \neq 0  \text{ et } x < 0\)   
+
+\( x-1 \neq 0  \text{ et } x < 0 \)    
+
+\(   x\neq 1  \text{ et } x < 0 \)     
+
+\(   x\neq 1 \text{ et } x\in ]-\infty;0[ \)     
+
+\(   x\in ]-\infty;0[ \)    
+
+\( x\in ]-\infty;0[ \)
     
-    %\item $\left\{
-        %\begin{array}{ll}
-            %f(x) = \dfrac{3}{|x+1| - 2}, & \text{si } x \leq 1 \\
-            %f(x) = \sqrt{x - 3}, & \text{si } x > 1
-        %\end{array}
-    %\right.$
+\( Df_{1}=]-\infty;0[ \)
+
+\( f_{2}\quad \exists \text{ ssi } \quad  x^2 - 4 \geq 0  \text{ et } x \geq 0\)   
+
+Posons \( f_{2}\quad \exists \text{ ssi } \quad  x^2 - 4 = 0  \text{ et } x = 0\)   
+
+\begin{center}
+\begin{tikzpicture}
+    % Création du tableau
+    \tkzTabInit{$x$ / 1 , $x$ / 1 , $x^2-4$ / 1}
+      { $-\infty$, $-2$, $0$, $2$, $+\infty$ }
+    % Ligne x+1
+    \tkzTabLine{ , - , t , - , z ,+, t ,+, }
+    % Ligne 2x+3
+    \tkzTabLine{ , + , z , - , t ,-,z ,+, }
+\end{tikzpicture}
+\end{center}
+
+\( Df_{2}=[2;+\infty[ \)
+
+\begin{center}
+\( Df=Df_{1} \cup Df_{2} \)\\
+\( Df=]-\infty;0[ \cup [2;+\infty[ \)
+\end{center}    
+
+              \begin{resultbox}
+            \[
+                \mathbf{Df = ]-\infty;0[ \cup [2;+\infty[ \quad\quad\quad \textbf{1pt}}
+            \]
+        \end{resultbox} 
+    \item $\left\{
+        \begin{array}{ll}
+            f(x) = \dfrac{3}{|x+1| - 2}, & \text{si } x \leq 1 \\
+            f(x) = \sqrt{x - 3}, & \text{si } x > 1
+        \end{array}
+    \right.$
+    
+Posons  $\left\{
+        \begin{array}{ll}
+            f_{1}(x) = \dfrac{3}{|x+1| - 2}, & \text{si } x \leq 1 \\
+            f_{2}(x) = \sqrt{x - 3}, & \text{si } x > 1
+        \end{array}
+    \right.$
+    
+\( 
+\begin{array}{llll}
+            f_{1}\quad \exists \text{ ssi }& \quad  |x+1| - 2 \neq 0 & \text{ et } & x \leq 1 \\
+       			 																&\quad  |x+1|  \neq 2 & \text{ et } & x \leq 1 \\
+       																			&\quad  x+1  \neq -2\text{ ou } x+1  \neq 2 & \text{ et } & x \leq 1 \\
+       																			&\quad  x \neq -3\text{ ou } x \neq 1 & \text{ et } & x \leq 1 \\
+       																			&\quad  x \neq -3\text{ ou } x \neq 1 & \text{ et } & x \in ]-\infty;1] \\
+       																			&\quad x \in ]-\infty;-3[\cup]-3;1[\\
+        \end{array} \\
+\) 
+
+\begin{center}
+\( Df_{1} = ]-\infty;-3[\cup]-3;1[ \)\\
+\end{center}     
+
+\( 
+\begin{array}{llll}
+            f_{2}\quad \exists \text{ ssi }& \quad  x - 3 \geq 0 & \text{ et } & x > 1 \\
+       			 																& \quad  x  \geq 3 & \text{ et } & x > 1 \\
+       																			& \quad  x\in [3;+\infty[ & \text{ et } & x\in ]1;+\infty[\\
+       																			& \quad  x \in ]1;+\infty[ & \cap & x \in[3;+\infty[\\
+       																			& \quad  x \in ( ]1;+\infty[ & \cap &  [3;+\infty[)\\
+       																			& \quad x \in [3;+\infty[
+        \end{array} \\
+\) 
+
+\begin{center}
+\( Df_{2} = [3;+\infty[ \)\\
+\end{center}     
+
+\begin{center}
+\( Df=Df_{1} \cup Df_{2} \)\\
+\( Df=(]-\infty;-3[\cup]-3;1[)\cup[3;+\infty[ \)
+\end{center} 
+
+              \begin{resultbox}
+            \[
+                \mathbf{Df = \left( ]-\infty;-3[\cup]-3;1[\right) \cup[3;+\infty[ \quad\quad\quad \textbf{1pt}}
+            \]
+        \end{resultbox}     
+    
 \end{enumerate}
 
 \section*{\underline{Exercice 2 :} 4 pts }
