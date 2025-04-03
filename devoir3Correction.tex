@@ -101,10 +101,37 @@ middle color = tcbcolback!80!black]
     \item  Montrons que \( (C_f) \) admet la droite \( (\Delta) \) pour axe de symétrie.
 
 \begin{enumerate}
-    \item \( f(x) = -3x^2 + 4x + 1 \) et \( (\Delta) : x = \dfrac{2}{3} \).
-%    \item \( f(x) = \dfrac{x^2 + 4x + 3}{2x^2 + 8x + 9} \) et \( (\Delta) : x = -2 \).
+    \item \( f(x) = -3x^2 + 4x + 1 \) et \( (\Delta) : x = \frac{2}{3} \).
+    
+    \( (\Delta) : x = \frac{2}{3} \) est axe de symétrie ssi \( f(2a - x) = f(x) \) où \( a = \frac{2}{3} \)
+    
+    \(
+    \begin{aligned}
+    	f(2a - x) = f(x)  & \implies -3(2a - x)^2 + 4(2a - x) + 1 = -3x^2 + 4x + 1 \\
+    										& \implies -3\left( 2\times\frac{2}{3} - x\right) ^2 + 4\left( 2\times\frac{2}{3} - x\right)  + 1 = -3x^2 + 4x + 1 \\
+    										& \implies -3\left( \frac{4}{3} - x\right) ^2 + 4\left( \frac{4}{3} - x\right)  + 1 = -3x^2 + 4x + 1 \\
+    										& \implies -3\left( \frac{16}{9} + x^{2} - \frac{8x}{3}\right) + \left( \frac{16}{3} - 4x\right)  + 1 = -3x^2 + 4x + 1 \\
+    										& \implies \frac{-16}{3} - 3x^{2} + 8x +  \frac{16}{3} - 4x  + 1 = -3x^2 + 4x + 1 \\
+    										& \implies - 3x^{2} + 4x  + 1 = -3x^2 + 4x + 1 \textbf{ vrai }\\
+    										&\text{ Donc \(  x = \frac{2}{3} \) est bien axe de symétrie }
+    \end{aligned}
+    \)
+    \item \( f(x) = \frac{x^2 + 4x + 3}{2x^2 + 8x + 9} \) et \( (\Delta) : x = -2 \).
+    
+    \( (\Delta) : x = -2 \) est axe de symétrie ssi \( f(2a - x) = f(x) \) où \( a =  -2 \)
+    
+    \(
+    \begin{aligned}
+    	f(2a - x) = f(x)  & \implies \frac{(2a - x)^2 + 4(2a - x) + 3}{2(2a - x)^2 + 8(2a - x) + 9} = \frac{x^2 + 4x + 3}{2x^2 + 8x + 9} \\
+    										& \implies \frac{(2\times(-2) - x)^2 + 4(2\times(-2) - x) + 3}{2(2\times(-2) - x)^2 + 8(2\times(-2) - x) + 9} = \frac{x^2 + 4x + 3}{2x^2 + 8x + 9} \\
+    										& \implies \frac{(-4 - x)^2 + 4(-4 - x) + 3}{2(-4 - x)^2 + 8(-4 - x) + 9} = \frac{x^2 + 4x + 3}{2x^2 + 8x + 9} \\
+    										& \implies \frac{16 + 8x + x^2 -16-4x + 3}{2(16 + 8x + x^2) -32-8x + 9} = \frac{x^2 + 4x + 3}{2x^2 + 8x + 9} \\
+    										& \implies \frac{x^2 + 4x + 3}{32 + 16x + 2x^2 -32-8x + 9} = \frac{x^2 + 4x + 3}{2x^2 + 8x + 9} \\
+    										& \implies \frac{x^2 + 4x + 3}{2x^2+8x + 9} = \frac{x^2 + 4x + 3}{2x^2 + 8x + 9}\textbf{ vrai } \\
+    										&\text{ Donc \(  x = -2 \) est bien axe de symétrie }
+    \end{aligned}
+    \)
 \end{enumerate}
-
 %\item  Dans chacun des cas suivants, montrer que \( (C_f) \) admet le point \( I \) pour centre de symétrie.
 
 %\begin{enumerate}
