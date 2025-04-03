@@ -48,7 +48,7 @@ middle color = tcbcolback!80!black]
 },interior engine=empty,
 },interior style={top color=yellow!5}}
 %%%%%%%%%%%%%%%%%%%%%%%
-
+\usepackage{tkz-tab}
 \usepackage{fancyhdr}
 \usepackage{eso-pic}         % Pour ajouter des éléments en arrière-plan
 % Commande pour ajouter du texte en arrière-plan
@@ -94,6 +94,118 @@ middle color = tcbcolback!80!black]
             \end{tabular}}\endgroup};
 \end{tikzpicture}
 \vspace{3cm}
+
+\section*{\underline{Exercice 1 :} 5 pts }
+Déterminons le domaine de définition dans chaque cas
+\begin{enumerate}
+    \item $f(x) = \sqrt{4x - x^3}$
+
+\( f\quad \exists\quad  \text{ ssi } \quad 4x - x^3 \geq 0 \)
+
+Posons \( 4x - x^3 = 0 \)
+
+\(
+\begin{aligned}
+4x - x^3 = 0 &\implies x(4 - x^2) = 0\\
+						 &\implies x = 0 \textbf{ ou } 4 - x^2 = 0\\
+ 						 &\implies	x = 0 \textbf{ ou } x = 2 \textbf{ ou } x = -2
+\end{aligned}
+\)  
+
+\begin{center}
+\begin{tikzpicture}
+    % Création du tableau
+    \tkzTabInit{$x$ / 1 , $x$ / 1 , $4 - x^2$ / 1 , $x(4 - x^2)$ / 1}
+      { $-\infty$, $-2$, $0$, $2$, $+\infty$ }
+    % Ligne x+1
+    \tkzTabLine{ , - , t , - , z ,+, t ,+, }
+    % Ligne 2x+3
+    \tkzTabLine{ , - , z , + , t ,+,z ,-, }
+    % Ligne P(x)
+    \tkzTabLine{ , + , z , - , z ,+, z,-, }
+\end{tikzpicture}
+\end{center}    
+
+\begin{center}
+\( Df = ]-\infty;-2] \cup [0 ; 2 ] \) 
+\end{center}   
+
+          \begin{resultbox}
+            \[
+                \mathbf{Df = ]-\infty;-2] \cup [0 ; 2 ]\quad\quad\quad \textbf{1pt}}
+            \]
+        \end{resultbox}     
+    
+    \item $f(x) = \sqrt{|1 - 3x| - x + 2}$
+    
+    \( f\quad \exists\quad  \text{ ssi } \quad |1 - 3x| - x + 2 \geq 0 \)
+
+\(
+\begin{aligned}
+|1 - 3x| - x + 2 \geq 0 &\implies |1 - 3x| \geq  x - 2\\
+						 &\implies 1 - 3x \geq  x - 2 \textbf{ ou } 1 - 3x \leq  -x + 2\\
+ 						 &\implies	4x \leq 3 \textbf{ ou }  2x \geq  -1\\
+ 						 &\implies	x \leq \frac{3}{4} \textbf{ ou }  x \geq \frac{-1}{2}\\
+\end{aligned}
+\)  
+   
+\begin{center}
+\( Df = \left]-\infty;\frac{3}{4}\right] \cup \left[\frac{-1}{2} ; +\infty\right[ \) 
+\end{center}
+
+          \begin{resultbox}
+            \[
+                \mathbf{Df = \left]-\infty;\frac{3}{4}\right] \cup \left[\frac{-1}{2} ; +\infty\right[\quad\quad\quad \textbf{1pt}}
+            \]
+        \end{resultbox} 
+
+    \item $\left\{
+        \begin{array}{ll}
+            f(x) = x \sqrt{\left| \dfrac{x+1}{x} \right|}, & \text{si } x < 0 \\
+            f(x) = \dfrac{x^3 - x^2}{x^2 + 1}, & \text{si } x \geq 0
+        \end{array}
+    \right.$
+
+Posons$\left\{
+        \begin{array}{ll}
+            f_{1}(x) = x \sqrt{\left| \dfrac{x+1}{x} \right|}, & \text{si } x < 0 \\
+            f_{2}(x) = \dfrac{x^3 - x^2}{x^2 + 1}, & \text{si } x \geq 0
+        \end{array}
+    \right.$    
+
+\( f_{1}\quad \exists \text{ ssi } \quad  \left| \dfrac{x+1}{x} \right| \geq 0 \text{ et } x \neq 0 \text{ et } x < 0\)    
+
+\( Df_{1} = \left]-\infty;0\right[ \)
+
+\( f_{2}\quad \exists \text{ ssi } \quad  x^2 + 1 \neq 0 \text{ et } x \geq 0\)    
+
+\( Df_{2} = \left[0;+\infty\right[ \)
+
+\begin{center}
+\( Df=Df_{1} \cup Df_{2} \)\\
+\( Df=\left]-\infty;0\right[ \cup \left[0;+\infty\right[ \)\\
+\( Df=\mathbb{R} \)
+\end{center}    
+
+              \begin{resultbox}
+            \[
+                \mathbf{Df = \mathbb{R}\quad\quad\quad \textbf{1pt}}
+            \]
+        \end{resultbox} 
+    %\item $\left\{
+        %\begin{array}{ll}
+            %f(x) = \dfrac{x(x-2)}{x-1}, & \text{si } x < 0 \\
+            %f(x) = x + \sqrt{x^2 - 4}, & \text{si } x \geq 0
+        %\end{array}
+    %\right.$
+    
+    %\item $\left\{
+        %\begin{array}{ll}
+            %f(x) = \dfrac{3}{|x+1| - 2}, & \text{si } x \leq 1 \\
+            %f(x) = \sqrt{x - 3}, & \text{si } x > 1
+        %\end{array}
+    %\right.$
+\end{enumerate}
 
 \section*{\underline{Exercice 2 :} 4 pts }
 
